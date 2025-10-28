@@ -86,9 +86,9 @@ const Index = () => {
               <img 
                 src="https://cdn.poehali.dev/files/c97b0f02-d47a-4183-9883-0cfe94bc5eac.png" 
                 alt="ДорТехПром" 
-                className="h-10 w-auto"
+                className="h-10 w-auto animate-fade-in"
               />
-              <span className="text-2xl font-bold text-foreground">ДорТехПром</span>
+              <span className="text-2xl font-bold text-foreground animate-fade-in">ДорТехПром</span>
             </div>
             <div className="hidden md:flex items-center gap-8">
               <a href="#catalog" className="text-foreground hover:text-primary transition-colors">Продукция</a>
