@@ -107,43 +107,54 @@ const Index = () => {
         </div>
       </header>
 
-      <section className="pt-20 px-6 relative overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50">
+      <section className="pt-20 px-6 relative overflow-hidden min-h-[85vh] flex items-center">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: 'url(https://cdn.poehali.dev/projects/2c87acdf-ed4a-4fac-bb52-5b655f0cb647/files/de6570ba-560c-44b4-84e1-2cab7ac4d750.jpg)' }}
+        ></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/90 to-slate-900/70"></div>
+        
         <div className="container mx-auto relative z-20 py-20 md:py-24">
           <div className="max-w-4xl">
-            <div className="inline-block px-3 py-1 bg-primary/10 rounded text-xs font-semibold text-primary mb-4">
-              ПРОИЗВОДСТВО С 1992 ГОДА
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20 mb-6">
+              <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+              <span className="text-primary font-semibold text-sm tracking-wide">ПРОИЗВОДСТВО С 1992 ГОДА</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
-              Производство дорожной спецтехники
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-tight">
+              Производство дорожной<br />спецтехники
             </h1>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl">
+            <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl leading-relaxed">
               Разработка и производство оборудования для строительства, ремонта и содержания дорог
             </p>
-            <div className="flex flex-wrap gap-3">
-              <Button size="default" className="font-medium">
+            <div className="flex flex-wrap gap-4">
+              <Button size="lg" className="font-medium shadow-xl hover:shadow-2xl transition-all px-8">
                 Смотреть каталог
-                <Icon name="ArrowRight" size={16} className="ml-2" />
+                <Icon name="ArrowRight" size={18} className="ml-2" />
               </Button>
-              <Button size="default" variant="outline" className="font-medium">
-                <Icon name="FileText" size={16} className="mr-2" />
+              <Button size="lg" variant="outline" className="font-medium border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-foreground transition-all px-8">
+                <Icon name="FileText" size={18} className="mr-2" />
                 Скачать прайс
               </Button>
             </div>
-            <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-border">
-              <div>
-                <div className="text-3xl font-bold text-primary mb-1">12</div>
-                <div className="text-sm text-muted-foreground">Видов техники</div>
+            <div className="grid grid-cols-3 gap-8 mt-16 pt-10 border-t border-white/20">
+              <div className="text-center md:text-left">
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">12</div>
+                <div className="text-sm text-white/80 font-medium">Видов техники</div>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-primary mb-1">30+</div>
-                <div className="text-sm text-muted-foreground">Лет на рынке</div>
+              <div className="text-center md:text-left">
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">30+</div>
+                <div className="text-sm text-white/80 font-medium">Лет на рынке</div>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-primary mb-1">4</div>
-                <div className="text-sm text-muted-foreground">Федеральных округа</div>
+              <div className="text-center md:text-left">
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">4</div>
+                <div className="text-sm text-white/80 font-medium">Федеральных округа</div>
               </div>
             </div>
           </div>
+        </div>
+        
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+          <Icon name="ChevronDown" size={32} className="text-white/60" />
         </div>
       </section>
 
