@@ -7,17 +7,20 @@ const Index = () => {
     {
       title: "Асфальто-бетонные заводы",
       icon: "Factory",
-      description: "Стационарные и мобильные АБЗ для производства качественных смесей"
+      description: "Стационарные и мобильные АБЗ для производства качественных смесей",
+      image: "https://cdn.poehali.dev/projects/2c87acdf-ed4a-4fac-bb52-5b655f0cb647/files/f12c68b7-611c-4c83-93dd-855b09934a80.jpg"
     },
     {
       title: "Ремонтеры дорожных покрытий",
       icon: "Wrench",
-      description: "Современное оборудование для эффективного ремонта дорог"
+      description: "Современное оборудование для эффективного ремонта дорог",
+      image: "https://cdn.poehali.dev/projects/2c87acdf-ed4a-4fac-bb52-5b655f0cb647/files/08833dc0-b561-41fc-9380-6bb4b4eb0444.jpg"
     },
     {
       title: "Разметочные машины",
       icon: "PaintBucket",
-      description: "Профессиональная техника для нанесения дорожной разметки"
+      description: "Профессиональная техника для нанесения дорожной разметки",
+      image: "https://cdn.poehali.dev/projects/2c87acdf-ed4a-4fac-bb52-5b655f0cb647/files/4ed3be1c-a1b7-4d76-b396-83d1afefdcd4.jpg"
     },
     {
       title: "Битумные котлы для заливки швов",
@@ -104,13 +107,30 @@ const Index = () => {
             {categories.map((category, index) => (
               <Card 
                 key={index} 
-                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer animate-fade-in"
+                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer animate-fade-in overflow-hidden"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <CardContent className="p-6">
-                  <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                    <Icon name={category.icon} size={32} className="text-primary" />
+                {category.image && (
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={category.image} 
+                      alt={category.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <div className="w-12 h-12 rounded-lg bg-white/90 flex items-center justify-center backdrop-blur-sm">
+                        <Icon name={category.icon} size={24} className="text-primary" />
+                      </div>
+                    </div>
                   </div>
+                )}
+                <CardContent className="p-6">
+                  {!category.image && (
+                    <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                      <Icon name={category.icon} size={32} className="text-primary" />
+                    </div>
+                  )}
                   <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                     {category.title}
                   </h3>
