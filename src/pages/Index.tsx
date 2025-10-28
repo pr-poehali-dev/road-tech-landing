@@ -79,7 +79,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+      <header className="fixed top-0 w-full bg-white border-b border-border z-50">
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -103,23 +103,22 @@ const Index = () => {
         </div>
       </header>
 
-      <section className="pt-32 pb-20 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10" />
-        <div className="container mx-auto relative z-10">
+      <section className="pt-32 pb-20 px-4 bg-gradient-to-b from-primary/5 to-background">
+        <div className="container mx-auto">
           <div className="max-w-3xl animate-fade-in">
-            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight tracking-tight">
               Производство дорожной спецтехники
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl">
               Надёжное оборудование для строительства и содержания дорог. 
               Полный цикл производства, сервисное обслуживание, поставка запчастей.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="text-lg">
+              <Button size="lg" className="text-base font-semibold px-8 py-6">
                 Смотреть каталог
                 <Icon name="ArrowRight" size={20} className="ml-2" />
               </Button>
-              <Button size="lg" variant="outline" className="text-lg">
+              <Button size="lg" variant="outline" className="text-base font-semibold px-8 py-6">
                 <Icon name="FileText" size={20} className="mr-2" />
                 Скачать прайс
               </Button>
@@ -128,10 +127,10 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="catalog" className="py-20 px-4 bg-muted/30">
+      <section id="catalog" className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Каталог продукции</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 tracking-tight">Каталог продукции</h2>
             <p className="text-xl text-muted-foreground">
               Широкий ассортимент дорожно-строительной техники
             </p>
@@ -140,7 +139,7 @@ const Index = () => {
             {categories.map((category, index) => (
               <Card 
                 key={index} 
-                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer animate-fade-in overflow-hidden"
+                className="group hover:shadow-lg transition-all duration-200 cursor-pointer animate-fade-in overflow-hidden border-2 hover:border-primary/20"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {category.image && (
@@ -150,9 +149,9 @@ const Index = () => {
                       alt={category.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                     <div className="absolute bottom-4 left-4 right-4">
-                      <div className="w-12 h-12 rounded-lg bg-white/90 flex items-center justify-center backdrop-blur-sm">
+                      <div className="w-12 h-12 rounded bg-white flex items-center justify-center shadow-lg">
                         <Icon name={category.icon} size={24} className="text-primary" />
                       </div>
                     </div>
@@ -160,14 +159,14 @@ const Index = () => {
                 )}
                 <CardContent className="p-6">
                   {!category.image && (
-                    <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                      <Icon name={category.icon} size={32} className="text-primary" />
+                    <div className="w-14 h-14 rounded bg-primary/5 flex items-center justify-center mb-4 border border-primary/10">
+                      <Icon name={category.icon} size={28} className="text-primary" />
                     </div>
                   )}
-                  <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-base font-semibold text-foreground mb-2">
                     {category.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     {category.description}
                   </p>
                 </CardContent>
@@ -177,81 +176,81 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="about" className="py-20 px-4">
+      <section id="about" className="py-20 px-4 bg-muted/20">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-in">
-              <h2 className="text-4xl font-bold text-foreground mb-6">О компании</h2>
-              <p className="text-lg text-muted-foreground mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 tracking-tight">О компании</h2>
+              <p className="text-base text-muted-foreground mb-4 leading-relaxed">
                 ДорТехПром — ведущий производитель дорожно-строительной техники с 15-летним опытом работы на российском рынке.
               </p>
-              <p className="text-lg text-muted-foreground mb-6">
+              <p className="text-base text-muted-foreground mb-8 leading-relaxed">
                 Мы предлагаем полный спектр оборудования для строительства и содержания дорог: от асфальто-бетонных заводов до специализированной техники для зимнего содержания.
               </p>
               <div className="grid grid-cols-2 gap-4">
-                <div className="p-4 bg-primary/10 rounded-lg">
+                <div className="p-5 bg-white border-l-4 border-primary rounded shadow-sm">
                   <div className="text-3xl font-bold text-primary mb-1">500+</div>
-                  <div className="text-sm text-muted-foreground">Единиц техники</div>
+                  <div className="text-xs uppercase tracking-wide text-muted-foreground font-medium">Единиц техники</div>
                 </div>
-                <div className="p-4 bg-accent/10 rounded-lg">
-                  <div className="text-3xl font-bold text-accent mb-1">15 лет</div>
-                  <div className="text-sm text-muted-foreground">На рынке</div>
+                <div className="p-5 bg-white border-l-4 border-primary rounded shadow-sm">
+                  <div className="text-3xl font-bold text-primary mb-1">15 лет</div>
+                  <div className="text-xs uppercase tracking-wide text-muted-foreground font-medium">На рынке</div>
                 </div>
-                <div className="p-4 bg-primary/10 rounded-lg">
+                <div className="p-5 bg-white border-l-4 border-primary rounded shadow-sm">
                   <div className="text-3xl font-bold text-primary mb-1">200+</div>
-                  <div className="text-sm text-muted-foreground">Довольных клиентов</div>
+                  <div className="text-xs uppercase tracking-wide text-muted-foreground font-medium">Довольных клиентов</div>
                 </div>
-                <div className="p-4 bg-accent/10 rounded-lg">
-                  <div className="text-3xl font-bold text-accent mb-1">24/7</div>
-                  <div className="text-sm text-muted-foreground">Сервисная поддержка</div>
+                <div className="p-5 bg-white border-l-4 border-primary rounded shadow-sm">
+                  <div className="text-3xl font-bold text-primary mb-1">24/7</div>
+                  <div className="text-xs uppercase tracking-wide text-muted-foreground font-medium">Сервисная поддержка</div>
                 </div>
               </div>
             </div>
-            <div className="relative h-96 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center animate-fade-in">
-              <Icon name="Building2" size={120} className="text-primary/30" />
+            <div className="relative h-96 bg-gradient-to-br from-primary/10 to-primary/5 rounded border border-primary/10 flex items-center justify-center animate-fade-in">
+              <Icon name="Building2" size={120} className="text-primary/20" />
             </div>
           </div>
         </div>
       </section>
 
-      <section id="service" className="py-20 px-4 bg-muted/30">
+      <section id="service" className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Сервисное обслуживание</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 tracking-tight">Сервисное обслуживание</h2>
             <p className="text-xl text-muted-foreground">
               Полный комплекс услуг по техническому обслуживанию
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="animate-fade-in">
-              <CardContent className="p-8 text-center">
-                <div className="w-20 h-20 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                  <Icon name="Settings" size={40} className="text-primary" />
+            <Card className="animate-fade-in border-2">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 rounded bg-primary/5 flex items-center justify-center mb-6 border border-primary/10">
+                  <Icon name="Settings" size={32} className="text-primary" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-4">Гарантийное обслуживание</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-lg font-semibold text-foreground mb-3">Гарантийное обслуживание</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Полное гарантийное обслуживание на всё оборудование с выездом специалистов
                 </p>
               </CardContent>
             </Card>
-            <Card className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <CardContent className="p-8 text-center">
-                <div className="w-20 h-20 mx-auto rounded-full bg-accent/10 flex items-center justify-center mb-6">
-                  <Icon name="Package" size={40} className="text-accent" />
+            <Card className="animate-fade-in border-2" style={{ animationDelay: '0.1s' }}>
+              <CardContent className="p-8">
+                <div className="w-16 h-16 rounded bg-primary/5 flex items-center justify-center mb-6 border border-primary/10">
+                  <Icon name="Package" size={32} className="text-primary" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-4">Запасные части</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-lg font-semibold text-foreground mb-3">Запасные части</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Собственный склад оригинальных запчастей с оперативной доставкой
                 </p>
               </CardContent>
             </Card>
-            <Card className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <CardContent className="p-8 text-center">
-                <div className="w-20 h-20 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                  <Icon name="Users" size={40} className="text-primary" />
+            <Card className="animate-fade-in border-2" style={{ animationDelay: '0.2s' }}>
+              <CardContent className="p-8">
+                <div className="w-16 h-16 rounded bg-primary/5 flex items-center justify-center mb-6 border border-primary/10">
+                  <Icon name="Users" size={32} className="text-primary" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-4">Обучение операторов</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-lg font-semibold text-foreground mb-3">Обучение операторов</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Программы обучения для эффективной работы с нашей техникой
                 </p>
               </CardContent>
@@ -260,53 +259,53 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-20 px-4">
+      <section id="contacts" className="py-20 px-4 bg-muted/20">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-foreground mb-4">Свяжитесь с нами</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 tracking-tight">Свяжитесь с нами</h2>
               <p className="text-xl text-muted-foreground">
                 Готовы ответить на все ваши вопросы
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-12 mb-12">
               <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-foreground mb-6">Контактная информация</h3>
-                <Card className="hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold text-foreground mb-6">Контактная информация</h3>
+                <Card className="border-2">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <div className="w-12 h-12 rounded bg-primary/5 flex items-center justify-center flex-shrink-0 border border-primary/10">
                         <Icon name="Phone" size={24} className="text-primary" />
                       </div>
                       <div>
-                        <h4 className="font-bold text-foreground mb-1">Телефон</h4>
-                        <p className="text-muted-foreground">+7 (495) 123-45-67</p>
+                        <h4 className="font-semibold text-foreground mb-1">Телефон</h4>
+                        <p className="text-sm text-muted-foreground">+7 (495) 123-45-67</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
-                <Card className="hover:shadow-lg transition-shadow">
+                <Card className="border-2">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                        <Icon name="Mail" size={24} className="text-accent" />
+                      <div className="w-12 h-12 rounded bg-primary/5 flex items-center justify-center flex-shrink-0 border border-primary/10">
+                        <Icon name="Mail" size={24} className="text-primary" />
                       </div>
                       <div>
-                        <h4 className="font-bold text-foreground mb-1">Email</h4>
-                        <p className="text-muted-foreground">info@dortehprom.ru</p>
+                        <h4 className="font-semibold text-foreground mb-1">Email</h4>
+                        <p className="text-sm text-muted-foreground">info@dortehprom.ru</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
-                <Card className="hover:shadow-lg transition-shadow">
+                <Card className="border-2">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <div className="w-12 h-12 rounded bg-primary/5 flex items-center justify-center flex-shrink-0 border border-primary/10">
                         <Icon name="MapPin" size={24} className="text-primary" />
                       </div>
                       <div>
-                        <h4 className="font-bold text-foreground mb-1">Адрес</h4>
-                        <p className="text-muted-foreground">Москва, ул. Промышленная, 25</p>
+                        <h4 className="font-semibold text-foreground mb-1">Адрес</h4>
+                        <p className="text-sm text-muted-foreground">Москва, ул. Промышленная, 25</p>
                       </div>
                     </div>
                   </CardContent>
@@ -314,8 +313,8 @@ const Index = () => {
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-foreground mb-6">Написать нам</h3>
-                <Card>
+                <h3 className="text-xl font-semibold text-foreground mb-6">Написать нам</h3>
+                <Card className="border-2">
                   <CardContent className="p-6">
                     <form onSubmit={handleSubmit} className="space-y-4">
                       <div>
@@ -378,27 +377,28 @@ const Index = () => {
                       </div>
                       
                       {submitStatus === 'success' && (
-                        <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm">
+                        <div className="p-4 bg-primary/5 border-2 border-primary rounded text-primary text-sm">
                           <div className="flex items-center gap-2">
                             <Icon name="CheckCircle" size={20} />
-                            <span>Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.</span>
+                            <span className="font-medium">Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.</span>
                           </div>
                         </div>
                       )}
                       
                       {submitStatus === 'error' && (
-                        <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-800 text-sm">
+                        <div className="p-4 bg-red-50 border-2 border-red-300 rounded text-red-800 text-sm">
                           <div className="flex items-center gap-2">
                             <Icon name="AlertCircle" size={20} />
-                            <span>Произошла ошибка. Попробуйте позже или позвоните нам.</span>
+                            <span className="font-medium">Произошла ошибка. Попробуйте позже или позвоните нам.</span>
                           </div>
                         </div>
                       )}
 
                       <Button 
                         type="submit" 
-                        className="w-full"
+                        className="w-full font-semibold"
                         disabled={isSubmitting}
+                        size="lg"
                       >
                         {isSubmitting ? (
                           <>
@@ -421,7 +421,7 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="bg-foreground text-background py-12 px-4">
+      <footer className="bg-foreground text-background py-12 px-4 border-t-4 border-primary">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
