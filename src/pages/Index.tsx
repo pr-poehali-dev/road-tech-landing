@@ -1,8 +1,41 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import Icon from "@/components/ui/icon";
+import { useState } from "react";
 
 const Index = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    
+    try {
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      setSubmitStatus('success');
+      setFormData({ name: '', phone: '', email: '', message: '' });
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   const categories = [
     {
       title: "Асфальто-бетонные заводы",
@@ -236,34 +269,153 @@ const Index = () => {
                 Готовы ответить на все ваши вопросы
               </p>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <Icon name="Phone" size={28} className="text-primary" />
-                  </div>
-                  <h3 className="font-bold text-foreground mb-2">Телефон</h3>
-                  <p className="text-muted-foreground">+7 (495) 123-45-67</p>
-                </CardContent>
-              </Card>
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 mx-auto rounded-full bg-accent/10 flex items-center justify-center mb-4">
-                    <Icon name="Mail" size={28} className="text-accent" />
-                  </div>
-                  <h3 className="font-bold text-foreground mb-2">Email</h3>
-                  <p className="text-muted-foreground">info@dortehprom.ru</p>
-                </CardContent>
-              </Card>
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <Icon name="MapPin" size={28} className="text-primary" />
-                  </div>
-                  <h3 className="font-bold text-foreground mb-2">Адрес</h3>
-                  <p className="text-muted-foreground">Москва, ул. Промышленная, 25</p>
-                </CardContent>
-              </Card>
+            <div className="grid md:grid-cols-2 gap-12 mb-12">
+              <div className="space-y-6">
+                <h3 className="text-2xl font-bold text-foreground mb-6">Контактная информация</h3>
+                <Card className="hover:shadow-lg transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Icon name="Phone" size={24} className="text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-foreground mb-1">Телефон</h4>
+                        <p className="text-muted-foreground">+7 (495) 123-45-67</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card className="hover:shadow-lg transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                        <Icon name="Mail" size={24} className="text-accent" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-foreground mb-1">Email</h4>
+                        <p className="text-muted-foreground">info@dortehprom.ru</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card className="hover:shadow-lg transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Icon name="MapPin" size={24} className="text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-foreground mb-1">Адрес</h4>
+                        <p className="text-muted-foreground">Москва, ул. Промышленная, 25</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold text-foreground mb-6">Написать нам</h3>
+                <Card>
+                  <CardContent className="p-6">
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                      <div>
+                        <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                          Ваше имя *
+                        </label>
+                        <Input
+                          id="name"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          placeholder="Иван Иванов"
+                          required
+                          disabled={isSubmitting}
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                          Телефон *
+                        </label>
+                        <Input
+                          id="phone"
+                          name="phone"
+                          type="tel"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          placeholder="+7 (999) 123-45-67"
+                          required
+                          disabled={isSubmitting}
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                          Email
+                        </label>
+                        <Input
+                          id="email"
+                          name="email"
+                          type="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          placeholder="email@example.com"
+                          disabled={isSubmitting}
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                          Сообщение *
+                        </label>
+                        <Textarea
+                          id="message"
+                          name="message"
+                          value={formData.message}
+                          onChange={handleInputChange}
+                          placeholder="Расскажите о вашем проекте или задайте вопрос..."
+                          rows={5}
+                          required
+                          disabled={isSubmitting}
+                        />
+                      </div>
+                      
+                      {submitStatus === 'success' && (
+                        <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm">
+                          <div className="flex items-center gap-2">
+                            <Icon name="CheckCircle" size={20} />
+                            <span>Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.</span>
+                          </div>
+                        </div>
+                      )}
+                      
+                      {submitStatus === 'error' && (
+                        <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-800 text-sm">
+                          <div className="flex items-center gap-2">
+                            <Icon name="AlertCircle" size={20} />
+                            <span>Произошла ошибка. Попробуйте позже или позвоните нам.</span>
+                          </div>
+                        </div>
+                      )}
+
+                      <Button 
+                        type="submit" 
+                        className="w-full"
+                        disabled={isSubmitting}
+                      >
+                        {isSubmitting ? (
+                          <>
+                            <Icon name="Loader2" size={20} className="mr-2 animate-spin" />
+                            Отправка...
+                          </>
+                        ) : (
+                          <>
+                            <Icon name="Send" size={20} className="mr-2" />
+                            Отправить сообщение
+                          </>
+                        )}
+                      </Button>
+                    </form>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </div>
