@@ -107,40 +107,46 @@ const Index = () => {
         </div>
       </header>
 
-      <section className="pt-20 px-6 relative overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="container mx-auto relative z-20 py-20 md:py-24">
-          <div className="max-w-4xl">
-            <div className="inline-block px-3 py-1 bg-primary/10 rounded text-xs font-semibold text-primary mb-4">
-              ПРОИЗВОДСТВО С 1992 ГОДА
+      <section className="pt-20 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/95 to-foreground/80 z-10"></div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: 'url(https://cdn.poehali.dev/projects/2c87acdf-ed4a-4fac-bb52-5b655f0cb647/files/de6570ba-560c-44b4-84e1-2cab7ac4d750.jpg)' }}
+        ></div>
+        <div className="container mx-auto relative z-20 py-32 md:py-40">
+          <div className="max-w-3xl">
+            <div className="inline-block px-4 py-2 bg-primary/20 border-2 border-primary rounded mb-6">
+              <span className="text-primary font-bold text-sm tracking-wide">ПРОИЗВОДСТВО С 1992 ГОДА</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-background mb-6 leading-tight tracking-tight">
               Производство дорожной спецтехники
             </h1>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl">
-              Разработка и производство оборудования для строительства, ремонта и содержания дорог
+            <p className="text-lg md:text-xl text-background/90 mb-10 max-w-2xl">
+              Надёжное оборудование для строительства и содержания дорог. 
+              Полный цикл производства, сервисное обслуживание, поставка запчастей.
             </p>
-            <div className="flex flex-wrap gap-3">
-              <Button size="default" className="font-medium">
+            <div className="flex flex-wrap gap-4">
+              <Button size="lg" className="text-base font-semibold px-8 py-6 bg-primary hover:bg-primary/90">
                 Смотреть каталог
-                <Icon name="ArrowRight" size={16} className="ml-2" />
+                <Icon name="ArrowRight" size={20} className="ml-2" />
               </Button>
-              <Button size="default" variant="outline" className="font-medium">
-                <Icon name="FileText" size={16} className="mr-2" />
+              <Button size="lg" variant="outline" className="text-base font-semibold px-8 py-6 border-2 border-background text-background hover:bg-background hover:text-foreground">
+                <Icon name="FileText" size={20} className="mr-2" />
                 Скачать прайс
               </Button>
             </div>
-            <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-border">
+            <div className="grid grid-cols-3 gap-6 mt-16 pt-8 border-t-2 border-background/30">
               <div>
-                <div className="text-3xl font-bold text-primary mb-1">12</div>
-                <div className="text-sm text-muted-foreground">Видов техники</div>
+                <div className="text-4xl font-bold text-primary mb-2">12</div>
+                <div className="text-sm text-background/80 font-medium">Видов техники</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-1">30+</div>
-                <div className="text-sm text-muted-foreground">Лет на рынке</div>
+                <div className="text-4xl font-bold text-primary mb-2">30+</div>
+                <div className="text-sm text-background/80 font-medium">Лет на рынке</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-1">4</div>
-                <div className="text-sm text-muted-foreground">Федеральных округа</div>
+                <div className="text-4xl font-bold text-primary mb-2">4</div>
+                <div className="text-sm text-background/80 font-medium">Федеральных округа</div>
               </div>
             </div>
           </div>
