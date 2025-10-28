@@ -79,25 +79,25 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="fixed top-0 w-full bg-white border-b border-border z-50">
-        <div className="container mx-auto px-4 py-4">
+      <header className="fixed top-0 w-full bg-white border-b border-border z-50 shadow-sm">
+        <div className="container mx-auto px-6 py-3">
           <nav className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <img 
                 src="https://cdn.poehali.dev/files/c97b0f02-d47a-4183-9883-0cfe94bc5eac.png" 
-                alt="ДорТехПром" 
-                className="h-10 w-auto animate-fade-in"
+                alt="ДОРПРОМ" 
+                className="h-12 w-auto"
               />
-              <span className="text-2xl font-bold text-foreground animate-fade-in">ДорТехПром</span>
+              <span className="text-xl font-semibold text-foreground">ДОРПРОМ</span>
             </div>
-            <div className="hidden md:flex items-center gap-8">
-              <a href="#about" className="text-foreground hover:text-primary transition-colors">О компании</a>
-              <a href="#catalog" className="text-foreground hover:text-primary transition-colors">Продукция</a>
-              <a href="#service" className="text-foreground hover:text-primary transition-colors">Сервис</a>
-              <a href="#contacts" className="text-foreground hover:text-primary transition-colors">Контакты</a>
+            <div className="hidden md:flex items-center gap-6">
+              <a href="#about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">О компании</a>
+              <a href="#catalog" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Продукция</a>
+              <a href="#service" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Сервис</a>
+              <a href="#contacts" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Контакты</a>
             </div>
-            <Button className="hidden md:flex">
-              <Icon name="Phone" size={18} className="mr-2" />
+            <Button size="sm" className="hidden md:flex">
+              <Icon name="Phone" size={16} className="mr-2" />
               Связаться
             </Button>
             <Button variant="ghost" size="icon" className="md:hidden">
@@ -107,155 +107,149 @@ const Index = () => {
         </div>
       </header>
 
-      <section className="pt-20 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/95 to-foreground/80 z-10"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(https://cdn.poehali.dev/projects/2c87acdf-ed4a-4fac-bb52-5b655f0cb647/files/de6570ba-560c-44b4-84e1-2cab7ac4d750.jpg)' }}
-        ></div>
-        <div className="container mx-auto relative z-20 py-32 md:py-40">
-          <div className="max-w-3xl animate-fade-in">
-            <div className="inline-block px-4 py-2 bg-primary/20 border-2 border-primary rounded mb-6">
-              <span className="text-primary font-bold text-sm tracking-wide">ПРОИЗВОДСТВО С 1992 ГОДА</span>
+      <section className="pt-20 px-6 relative overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50">
+        <div className="container mx-auto relative z-20 py-20 md:py-24">
+          <div className="max-w-4xl">
+            <div className="inline-block px-3 py-1 bg-primary/10 rounded text-xs font-semibold text-primary mb-4">
+              ПРОИЗВОДСТВО С 1992 ГОДА
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-background mb-6 leading-tight tracking-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
               Производство дорожной спецтехники
             </h1>
-            <p className="text-lg md:text-xl text-background/90 mb-10 max-w-2xl">
-              Надёжное оборудование для строительства и содержания дорог. 
-              Полный цикл производства, сервисное обслуживание, поставка запчастей.
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl">
+              Разработка и производство оборудования для строительства, ремонта и содержания дорог
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="text-base font-semibold px-8 py-6 bg-primary hover:bg-primary/90">
+            <div className="flex flex-wrap gap-3">
+              <Button size="default" className="font-medium">
                 Смотреть каталог
-                <Icon name="ArrowRight" size={20} className="ml-2" />
+                <Icon name="ArrowRight" size={16} className="ml-2" />
               </Button>
-              <Button size="lg" variant="outline" className="text-base font-semibold px-8 py-6 border-2 border-background text-background hover:bg-background hover:text-foreground">
-                <Icon name="FileText" size={20} className="mr-2" />
+              <Button size="default" variant="outline" className="font-medium">
+                <Icon name="FileText" size={16} className="mr-2" />
                 Скачать прайс
               </Button>
             </div>
-            <div className="grid grid-cols-3 gap-6 mt-16 pt-8 border-t-2 border-background/30">
+            <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-border">
               <div>
-                <div className="text-4xl font-bold text-primary mb-2">12</div>
-                <div className="text-sm text-background/80 font-medium">Видов техники</div>
+                <div className="text-3xl font-bold text-primary mb-1">12</div>
+                <div className="text-sm text-muted-foreground">Видов техники</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-primary mb-2">30+</div>
-                <div className="text-sm text-background/80 font-medium">Лет на рынке</div>
+                <div className="text-3xl font-bold text-primary mb-1">30+</div>
+                <div className="text-sm text-muted-foreground">Лет на рынке</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-primary mb-2">4</div>
-                <div className="text-sm text-background/80 font-medium">Федеральных округа</div>
+                <div className="text-3xl font-bold text-primary mb-1">4</div>
+                <div className="text-sm text-muted-foreground">Федеральных округа</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="about" className="py-20 px-4 bg-muted/30">
+      <section id="about" className="py-16 px-6 bg-white">
         <div className="container mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 tracking-tight">О компании ДОРПРОМ</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-foreground mb-3">О компании ДОРПРОМ</h2>
+            <p className="text-base text-muted-foreground max-w-3xl">
               Инженерно-производственная фирма с многолетним опытом разработки и производства дорожно-строительной техники
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            <div className="space-y-6">
-              <Card className="p-8 border-2">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <div className="space-y-4">
+              <Card className="p-6 shadow-sm">
                 <div className="flex items-start gap-4">
-                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Icon name="CalendarCheck" size={32} className="text-primary" />
+                  <div className="w-12 h-12 rounded bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Icon name="CalendarCheck" size={24} className="text-primary" />
                   </div>
                   <div>
-                    <div className="text-5xl font-bold text-primary mb-2">1992</div>
-                    <p className="text-muted-foreground">
-                      Фирма «ДОРПРОМ» зарегистрирована в Подмосковье. За время деятельности разработано, запатентовано и изготовлено <span className="font-bold text-foreground">12 видов машин</span> для дорожного, лесного и сельского хозяйства.
+                    <div className="text-3xl font-bold text-primary mb-2">1992</div>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Фирма «ДОРПРОМ» зарегистрирована в Подмосковье. За время деятельности разработано, запатентовано и изготовлено <span className="font-semibold text-foreground">12 видов машин</span> для дорожного, лесного и сельского хозяйства.
                     </p>
                   </div>
                 </div>
               </Card>
 
-              <Card className="p-8 border-2">
+              <Card className="p-6 shadow-sm">
                 <div className="flex items-start gap-4">
-                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Icon name="Globe" size={32} className="text-primary" />
+                  <div className="w-12 h-12 rounded bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Icon name="Globe" size={24} className="text-primary" />
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-foreground mb-3">Дорпром Интернациональ</div>
-                    <p className="text-muted-foreground">
-                      Сотрудничество с зарубежными компаниями: <span className="font-semibold">Виртген, Бомаг, Цедима</span> (Германия), <span className="font-semibold">Динапак, Партнер</span> (Швеция), <span className="font-semibold">Бернарди</span> (Италия).
+                    <div className="text-lg font-bold text-foreground mb-2">Дорпром Интернациональ</div>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Сотрудничество с зарубежными компаниями: <span className="font-medium">Виртген, Бомаг, Цедима</span> (Германия), <span className="font-medium">Динапак, Партнер</span> (Швеция), <span className="font-medium">Бернарди</span> (Италия).
                     </p>
                   </div>
                 </div>
               </Card>
 
-              <Card className="p-8 border-2">
+              <Card className="p-6 shadow-sm">
                 <div className="flex items-start gap-4">
-                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Icon name="Award" size={32} className="text-primary" />
+                  <div className="w-12 h-12 rounded bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Icon name="Award" size={24} className="text-primary" />
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-foreground mb-3">Качество и сертификация</div>
-                    <p className="text-muted-foreground">
-                      Все машины имеют сертификаты и одобрения типа ТС. Срок производства от <span className="font-bold text-foreground">15 до 45 дней</span>.
+                    <div className="text-lg font-bold text-foreground mb-2">Качество и сертификация</div>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Все машины имеют сертификаты и одобрения типа ТС. Срок производства от <span className="font-semibold text-foreground">15 до 45 дней</span>.
                     </p>
                   </div>
                 </div>
               </Card>
             </div>
 
-            <div className="space-y-6">
-              <Card className="p-8 border-2 bg-primary/5">
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center p-4 bg-background rounded-lg border-2">
-                    <Icon name="Cog" size={40} className="text-primary mx-auto mb-3" />
-                    <div className="text-3xl font-bold text-foreground mb-2">12</div>
-                    <div className="text-sm text-muted-foreground font-medium">Видов техники</div>
+            <div className="space-y-4">
+              <Card className="p-6 shadow-sm bg-slate-50">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center p-4 bg-white rounded">
+                    <Icon name="Cog" size={32} className="text-primary mx-auto mb-2" />
+                    <div className="text-2xl font-bold text-foreground mb-1">12</div>
+                    <div className="text-xs text-muted-foreground">Видов техники</div>
                   </div>
-                  <div className="text-center p-4 bg-background rounded-lg border-2">
-                    <Icon name="TrendingDown" size={40} className="text-primary mx-auto mb-3" />
-                    <div className="text-3xl font-bold text-foreground mb-2">-30%</div>
-                    <div className="text-sm text-muted-foreground font-medium">Снижение стоимости</div>
+                  <div className="text-center p-4 bg-white rounded">
+                    <Icon name="TrendingDown" size={32} className="text-primary mx-auto mb-2" />
+                    <div className="text-2xl font-bold text-foreground mb-1">-30%</div>
+                    <div className="text-xs text-muted-foreground">Снижение стоимости</div>
                   </div>
-                  <div className="text-center p-4 bg-background rounded-lg border-2">
-                    <Icon name="Clock" size={40} className="text-primary mx-auto mb-3" />
-                    <div className="text-3xl font-bold text-foreground mb-2">15-45</div>
-                    <div className="text-sm text-muted-foreground font-medium">Дней на производство</div>
+                  <div className="text-center p-4 bg-white rounded">
+                    <Icon name="Clock" size={32} className="text-primary mx-auto mb-2" />
+                    <div className="text-2xl font-bold text-foreground mb-1">15-45</div>
+                    <div className="text-xs text-muted-foreground">Дней на производство</div>
                   </div>
-                  <div className="text-center p-4 bg-background rounded-lg border-2">
-                    <Icon name="MapPin" size={40} className="text-primary mx-auto mb-3" />
-                    <div className="text-3xl font-bold text-foreground mb-2">4</div>
-                    <div className="text-sm text-muted-foreground font-medium">Федеральных округа</div>
+                  <div className="text-center p-4 bg-white rounded">
+                    <Icon name="MapPin" size={32} className="text-primary mx-auto mb-2" />
+                    <div className="text-2xl font-bold text-foreground mb-1">4</div>
+                    <div className="text-xs text-muted-foreground">Федеральных округа</div>
                   </div>
                 </div>
               </Card>
 
-              <Card className="p-8 border-2">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Icon name="Factory" size={32} className="text-primary" />
+              <Card className="p-6 shadow-sm">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Icon name="Factory" size={24} className="text-primary" />
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-foreground mb-3">Импортозамещение</div>
-                    <p className="text-muted-foreground">
-                      Переход на отечественные комплектующие снижает стоимость на <span className="font-bold text-foreground">20-30%</span> при сохранении качества.
+                    <div className="text-lg font-bold text-foreground mb-2">Импортозамещение</div>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Переход на отечественные комплектующие снижает стоимость на <span className="font-semibold text-foreground">20-30%</span> при сохранении качества.
                     </p>
                   </div>
                 </div>
               </Card>
 
-              <Card className="p-8 border-2 bg-gradient-to-br from-primary/10 to-primary/5">
+              <Card className="p-6 shadow-sm">
                 <div className="flex items-start gap-4">
-                  <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                    <Icon name="Wrench" size={32} className="text-primary-foreground" />
+                  <div className="w-12 h-12 rounded bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Icon name="Wrench" size={24} className="text-primary" />
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-foreground mb-3">Сервисное обслуживание</div>
-                    <p className="text-muted-foreground">
-                      Гарантийное и сервисное обслуживание по территориальному принципу: <span className="font-semibold">Центральный, Северо-Западный, Южный и Уральский</span> Федеральные округа.
+                    <div className="text-lg font-bold text-foreground mb-2">Сервисное обслуживание</div>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Гарантийное и сервисное обслуживание по территориальному принципу: <span className="font-medium">Центральный, Северо-Западный, Южный и Уральский</span> Федеральные округа.
                     </p>
                   </div>
                 </div>
@@ -264,24 +258,24 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card className="p-6 text-center border-2 hover:border-primary/50 transition-colors">
-              <Icon name="PackageCheck" size={48} className="text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-foreground mb-2">Российские комплектующие</h3>
-              <p className="text-muted-foreground text-sm">
+            <Card className="p-5 text-center shadow-sm hover:shadow-md transition-shadow">
+              <Icon name="PackageCheck" size={40} className="text-primary mx-auto mb-3" />
+              <h3 className="text-base font-bold text-foreground mb-2">Российские комплектующие</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 Производство из отечественных материалов с привлечением опыта зарубежных компаний
               </p>
             </Card>
-            <Card className="p-6 text-center border-2 hover:border-primary/50 transition-colors">
-              <Icon name="Truck" size={48} className="text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-foreground mb-2">Переоборудование</h3>
-              <p className="text-muted-foreground text-sm">
+            <Card className="p-5 text-center shadow-sm hover:shadow-md transition-shadow">
+              <Icon name="Truck" size={40} className="text-primary mx-auto mb-3" />
+              <h3 className="text-base font-bold text-foreground mb-2">Переоборудование</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 Монтаж нового технологического оборудования на автотранспорт заказчиков
               </p>
             </Card>
-            <Card className="p-6 text-center border-2 hover:border-primary/50 transition-colors">
-              <Icon name="Sparkles" size={48} className="text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-foreground mb-2">Инновации</h3>
-              <p className="text-muted-foreground text-sm">
+            <Card className="p-5 text-center shadow-sm hover:shadow-md transition-shadow">
+              <Icon name="Sparkles" size={40} className="text-primary mx-auto mb-3" />
+              <h3 className="text-base font-bold text-foreground mb-2">Инновации</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 Реализация традиционных методов ремонта и метода пневмонабрызга
               </p>
             </Card>
@@ -289,46 +283,45 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="catalog" className="py-20 px-4">
+      <section id="catalog" className="py-16 px-6 bg-slate-50">
         <div className="container mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 tracking-tight">Каталог продукции</h2>
-            <p className="text-xl text-muted-foreground">
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-foreground mb-3">Каталог продукции</h2>
+            <p className="text-base text-muted-foreground">
               Широкий ассортимент дорожно-строительной техники
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {categories.map((category, index) => (
               <Card 
                 key={index} 
-                className="group hover:shadow-lg transition-all duration-200 cursor-pointer animate-fade-in overflow-hidden border-2 hover:border-primary/20"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group hover:shadow-md transition-shadow cursor-pointer overflow-hidden"
               >
                 {category.image && (
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-44 overflow-hidden">
                     <img 
                       src={category.image} 
                       alt={category.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <div className="w-12 h-12 rounded bg-white flex items-center justify-center shadow-lg">
-                        <Icon name={category.icon} size={24} className="text-primary" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute bottom-3 left-3">
+                      <div className="w-10 h-10 rounded bg-white flex items-center justify-center">
+                        <Icon name={category.icon} size={20} className="text-primary" />
                       </div>
                     </div>
                   </div>
                 )}
-                <CardContent className="p-6">
+                <CardContent className="p-5">
                   {!category.image && (
-                    <div className="w-14 h-14 rounded bg-primary/5 flex items-center justify-center mb-4 border border-primary/10">
-                      <Icon name={category.icon} size={28} className="text-primary" />
+                    <div className="w-12 h-12 rounded bg-primary/5 flex items-center justify-center mb-3">
+                      <Icon name={category.icon} size={24} className="text-primary" />
                     </div>
                   )}
-                  <h3 className="text-base font-semibold text-foreground mb-2">
+                  <h3 className="text-sm font-bold text-foreground mb-2 leading-tight">
                     {category.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-xs text-muted-foreground leading-relaxed">
                     {category.description}
                   </p>
                 </CardContent>
@@ -338,80 +331,43 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="about" className="py-20 px-4 bg-muted/20">
+      <section id="service" className="py-16 px-6 bg-white">
         <div className="container mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="animate-slide-in">
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 tracking-tight">О компании</h2>
-              <p className="text-base text-muted-foreground mb-4 leading-relaxed">
-                ДорТехПром — ведущий производитель дорожно-строительной техники с 15-летним опытом работы на российском рынке.
-              </p>
-              <p className="text-base text-muted-foreground mb-8 leading-relaxed">
-                Мы предлагаем полный спектр оборудования для строительства и содержания дорог: от асфальто-бетонных заводов до специализированной техники для зимнего содержания.
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="p-5 bg-white border-l-4 border-primary rounded shadow-sm">
-                  <div className="text-3xl font-bold text-primary mb-1">500+</div>
-                  <div className="text-xs uppercase tracking-wide text-muted-foreground font-medium">Единиц техники</div>
-                </div>
-                <div className="p-5 bg-white border-l-4 border-primary rounded shadow-sm">
-                  <div className="text-3xl font-bold text-primary mb-1">15 лет</div>
-                  <div className="text-xs uppercase tracking-wide text-muted-foreground font-medium">На рынке</div>
-                </div>
-                <div className="p-5 bg-white border-l-4 border-primary rounded shadow-sm">
-                  <div className="text-3xl font-bold text-primary mb-1">200+</div>
-                  <div className="text-xs uppercase tracking-wide text-muted-foreground font-medium">Довольных клиентов</div>
-                </div>
-                <div className="p-5 bg-white border-l-4 border-primary rounded shadow-sm">
-                  <div className="text-3xl font-bold text-primary mb-1">24/7</div>
-                  <div className="text-xs uppercase tracking-wide text-muted-foreground font-medium">Сервисная поддержка</div>
-                </div>
-              </div>
-            </div>
-            <div className="relative h-96 bg-gradient-to-br from-primary/10 to-primary/5 rounded border border-primary/10 flex items-center justify-center animate-fade-in">
-              <Icon name="Building2" size={120} className="text-primary/20" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="service" className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 tracking-tight">Сервисное обслуживание</h2>
-            <p className="text-xl text-muted-foreground">
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-foreground mb-3">Сервисное обслуживание</h2>
+            <p className="text-base text-muted-foreground">
               Полный комплекс услуг по техническому обслуживанию
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="animate-fade-in border-2">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 rounded bg-primary/5 flex items-center justify-center mb-6 border border-primary/10">
-                  <Icon name="Settings" size={32} className="text-primary" />
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="shadow-sm">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 rounded bg-primary/5 flex items-center justify-center mb-4">
+                  <Icon name="Settings" size={24} className="text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-3">Гарантийное обслуживание</h3>
+                <h3 className="text-base font-bold text-foreground mb-2">Гарантийное обслуживание</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Полное гарантийное обслуживание на всё оборудование с выездом специалистов
                 </p>
               </CardContent>
             </Card>
-            <Card className="animate-fade-in border-2" style={{ animationDelay: '0.1s' }}>
-              <CardContent className="p-8">
-                <div className="w-16 h-16 rounded bg-primary/5 flex items-center justify-center mb-6 border border-primary/10">
-                  <Icon name="Package" size={32} className="text-primary" />
+            <Card className="shadow-sm">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 rounded bg-primary/5 flex items-center justify-center mb-4">
+                  <Icon name="Package" size={24} className="text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-3">Запасные части</h3>
+                <h3 className="text-base font-bold text-foreground mb-2">Запасные части</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Собственный склад оригинальных запчастей с оперативной доставкой
                 </p>
               </CardContent>
             </Card>
-            <Card className="animate-fade-in border-2" style={{ animationDelay: '0.2s' }}>
-              <CardContent className="p-8">
-                <div className="w-16 h-16 rounded bg-primary/5 flex items-center justify-center mb-6 border border-primary/10">
-                  <Icon name="Users" size={32} className="text-primary" />
+            <Card className="shadow-sm">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 rounded bg-primary/5 flex items-center justify-center mb-4">
+                  <Icon name="Users" size={24} className="text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-3">Обучение операторов</h3>
+                <h3 className="text-base font-bold text-foreground mb-2">Обучение операторов</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Программы обучения для эффективной работы с нашей техникой
                 </p>
@@ -421,52 +377,52 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-20 px-4 bg-muted/20">
+      <section id="contacts" className="py-16 px-6 bg-slate-50">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 tracking-tight">Свяжитесь с нами</h2>
-              <p className="text-xl text-muted-foreground">
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-foreground mb-3">Свяжитесь с нами</h2>
+              <p className="text-base text-muted-foreground">
                 Готовы ответить на все ваши вопросы
               </p>
             </div>
-            <div className="grid md:grid-cols-2 gap-12 mb-12">
-              <div className="space-y-6">
-                <h3 className="text-xl font-semibold text-foreground mb-6">Контактная информация</h3>
-                <Card className="border-2">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded bg-primary/5 flex items-center justify-center flex-shrink-0 border border-primary/10">
-                        <Icon name="Phone" size={24} className="text-primary" />
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <div className="space-y-4">
+                <h3 className="text-lg font-bold text-foreground mb-4">Контактная информация</h3>
+                <Card className="shadow-sm">
+                  <CardContent className="p-5">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded bg-primary/5 flex items-center justify-center flex-shrink-0">
+                        <Icon name="Phone" size={20} className="text-primary" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground mb-1">Телефон</h4>
+                        <h4 className="font-semibold text-foreground text-sm mb-0.5">Телефон</h4>
                         <p className="text-sm text-muted-foreground">+7 (495) 123-45-67</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
-                <Card className="border-2">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded bg-primary/5 flex items-center justify-center flex-shrink-0 border border-primary/10">
-                        <Icon name="Mail" size={24} className="text-primary" />
+                <Card className="shadow-sm">
+                  <CardContent className="p-5">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded bg-primary/5 flex items-center justify-center flex-shrink-0">
+                        <Icon name="Mail" size={20} className="text-primary" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground mb-1">Email</h4>
+                        <h4 className="font-semibold text-foreground text-sm mb-0.5">Email</h4>
                         <p className="text-sm text-muted-foreground">info@dortehprom.ru</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
-                <Card className="border-2">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded bg-primary/5 flex items-center justify-center flex-shrink-0 border border-primary/10">
-                        <Icon name="MapPin" size={24} className="text-primary" />
+                <Card className="shadow-sm">
+                  <CardContent className="p-5">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded bg-primary/5 flex items-center justify-center flex-shrink-0">
+                        <Icon name="MapPin" size={20} className="text-primary" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground mb-1">Адрес</h4>
+                        <h4 className="font-semibold text-foreground text-sm mb-0.5">Адрес</h4>
                         <p className="text-sm text-muted-foreground">Москва, ул. Промышленная, 25</p>
                       </div>
                     </div>
@@ -475,10 +431,10 @@ const Index = () => {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-6">Написать нам</h3>
-                <Card className="border-2">
-                  <CardContent className="p-6">
-                    <form onSubmit={handleSubmit} className="space-y-4">
+                <h3 className="text-lg font-bold text-foreground mb-4">Написать нам</h3>
+                <Card className="shadow-sm">
+                  <CardContent className="p-5">
+                    <form onSubmit={handleSubmit} className="space-y-3">
                       <div>
                         <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                           Ваше имя *
@@ -539,37 +495,37 @@ const Index = () => {
                       </div>
                       
                       {submitStatus === 'success' && (
-                        <div className="p-4 bg-primary/5 border-2 border-primary rounded text-primary text-sm">
+                        <div className="p-3 bg-primary/5 border border-primary rounded text-primary text-sm">
                           <div className="flex items-center gap-2">
-                            <Icon name="CheckCircle" size={20} />
-                            <span className="font-medium">Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.</span>
+                            <Icon name="CheckCircle" size={18} />
+                            <span className="font-medium">Спасибо! Ваше сообщение отправлено.</span>
                           </div>
                         </div>
                       )}
                       
                       {submitStatus === 'error' && (
-                        <div className="p-4 bg-red-50 border-2 border-red-300 rounded text-red-800 text-sm">
+                        <div className="p-3 bg-red-50 border border-red-300 rounded text-red-800 text-sm">
                           <div className="flex items-center gap-2">
-                            <Icon name="AlertCircle" size={20} />
-                            <span className="font-medium">Произошла ошибка. Попробуйте позже или позвоните нам.</span>
+                            <Icon name="AlertCircle" size={18} />
+                            <span className="font-medium">Произошла ошибка. Попробуйте позже.</span>
                           </div>
                         </div>
                       )}
 
                       <Button 
                         type="submit" 
-                        className="w-full font-semibold"
+                        className="w-full font-medium"
                         disabled={isSubmitting}
-                        size="lg"
+                        size="default"
                       >
                         {isSubmitting ? (
                           <>
-                            <Icon name="Loader2" size={20} className="mr-2 animate-spin" />
+                            <Icon name="Loader2" size={16} className="mr-2 animate-spin" />
                             Отправка...
                           </>
                         ) : (
                           <>
-                            <Icon name="Send" size={20} className="mr-2" />
+                            <Icon name="Send" size={16} className="mr-2" />
                             Отправить сообщение
                           </>
                         )}
@@ -583,49 +539,49 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="bg-foreground text-background py-12 px-4 border-t-4 border-primary">
+      <footer className="bg-slate-800 text-white py-10 px-6">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-2 mb-3">
                 <img 
                   src="https://cdn.poehali.dev/files/c97b0f02-d47a-4183-9883-0cfe94bc5eac.png" 
-                  alt="ДорТехПром" 
+                  alt="ДОРПРОМ" 
                   className="h-8 w-auto"
                 />
-                <span className="text-xl font-bold">ДорТехПром</span>
+                <span className="text-lg font-semibold">ДОРПРОМ</span>
               </div>
-              <p className="text-sm opacity-80">
-                Производство дорожной спецтехники с 2009 года
+              <p className="text-sm text-slate-400">
+                Производство дорожной спецтехники с 1992 года
               </p>
             </div>
             <div>
-              <h4 className="font-bold mb-4">Продукция</h4>
-              <ul className="space-y-2 text-sm opacity-80">
+              <h4 className="font-semibold mb-3 text-sm">Продукция</h4>
+              <ul className="space-y-2 text-sm text-slate-400">
                 <li>Асфальто-бетонные заводы</li>
                 <li>Ремонтеры покрытий</li>
                 <li>Разметочные машины</li>
               </ul>
             </div>
             <div>
-              <h4 className="font-bold mb-4">Компания</h4>
-              <ul className="space-y-2 text-sm opacity-80">
+              <h4 className="font-semibold mb-3 text-sm">Компания</h4>
+              <ul className="space-y-2 text-sm text-slate-400">
                 <li>О нас</li>
                 <li>Сертификаты</li>
                 <li>Вакансии</li>
               </ul>
             </div>
             <div>
-              <h4 className="font-bold mb-4">Контакты</h4>
-              <ul className="space-y-2 text-sm opacity-80">
+              <h4 className="font-semibold mb-3 text-sm">Контакты</h4>
+              <ul className="space-y-2 text-sm text-slate-400">
                 <li>+7 (495) 123-45-67</li>
                 <li>info@dortehprom.ru</li>
                 <li>Москва, ул. Промышленная, 25</li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-background/20 pt-8 text-center text-sm opacity-60">
-            © 2024 ДорТехПром. Все права защищены.
+          <div className="border-t border-slate-700 pt-6 text-center text-sm text-slate-500">
+            © 2024 ДОРПРОМ. Все права защищены.
           </div>
         </div>
       </footer>
