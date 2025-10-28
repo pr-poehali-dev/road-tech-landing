@@ -91,8 +91,8 @@ const Index = () => {
               <span className="text-2xl font-bold text-foreground animate-fade-in">ДорТехПром</span>
             </div>
             <div className="hidden md:flex items-center gap-8">
-              <a href="#catalog" className="text-foreground hover:text-primary transition-colors">Продукция</a>
               <a href="#about" className="text-foreground hover:text-primary transition-colors">О компании</a>
+              <a href="#catalog" className="text-foreground hover:text-primary transition-colors">Продукция</a>
               <a href="#service" className="text-foreground hover:text-primary transition-colors">Сервис</a>
               <a href="#contacts" className="text-foreground hover:text-primary transition-colors">Контакты</a>
             </div>
@@ -116,7 +116,7 @@ const Index = () => {
         <div className="container mx-auto relative z-20 py-32 md:py-40">
           <div className="max-w-3xl animate-fade-in">
             <div className="inline-block px-4 py-2 bg-primary/20 border-2 border-primary rounded mb-6">
-              <span className="text-primary font-bold text-sm tracking-wide">ПРОИЗВОДСТВО С 2009 ГОДА</span>
+              <span className="text-primary font-bold text-sm tracking-wide">ПРОИЗВОДСТВО С 1992 ГОДА</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-background mb-6 leading-tight tracking-tight">
               Производство дорожной спецтехники
@@ -137,18 +137,154 @@ const Index = () => {
             </div>
             <div className="grid grid-cols-3 gap-6 mt-16 pt-8 border-t-2 border-background/30">
               <div>
-                <div className="text-4xl font-bold text-primary mb-2">1000+</div>
-                <div className="text-sm text-background/80 font-medium">Единиц техники</div>
+                <div className="text-4xl font-bold text-primary mb-2">12</div>
+                <div className="text-sm text-background/80 font-medium">Видов техники</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-primary mb-2">15+</div>
+                <div className="text-4xl font-bold text-primary mb-2">30+</div>
                 <div className="text-sm text-background/80 font-medium">Лет на рынке</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-primary mb-2">24/7</div>
-                <div className="text-sm text-background/80 font-medium">Техподдержка</div>
+                <div className="text-4xl font-bold text-primary mb-2">4</div>
+                <div className="text-sm text-background/80 font-medium">Федеральных округа</div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 tracking-tight">О компании ДОРПРОМ</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Инженерно-производственная фирма с многолетним опытом разработки и производства дорожно-строительной техники
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            <div className="space-y-6">
+              <Card className="p-8 border-2">
+                <div className="flex items-start gap-4">
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Icon name="CalendarCheck" size={32} className="text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-5xl font-bold text-primary mb-2">1992</div>
+                    <p className="text-muted-foreground">
+                      Фирма «ДОРПРОМ» зарегистрирована в Подмосковье. За время деятельности разработано, запатентовано и изготовлено <span className="font-bold text-foreground">12 видов машин</span> для дорожного, лесного и сельского хозяйства.
+                    </p>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-8 border-2">
+                <div className="flex items-start gap-4">
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Icon name="Globe" size={32} className="text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-foreground mb-3">Дорпром Интернациональ</div>
+                    <p className="text-muted-foreground">
+                      Сотрудничество с зарубежными компаниями: <span className="font-semibold">Виртген, Бомаг, Цедима</span> (Германия), <span className="font-semibold">Динапак, Партнер</span> (Швеция), <span className="font-semibold">Бернарди</span> (Италия).
+                    </p>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-8 border-2">
+                <div className="flex items-start gap-4">
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Icon name="Award" size={32} className="text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-foreground mb-3">Качество и сертификация</div>
+                    <p className="text-muted-foreground">
+                      Все машины имеют сертификаты и одобрения типа ТС. Срок производства от <span className="font-bold text-foreground">15 до 45 дней</span>.
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            </div>
+
+            <div className="space-y-6">
+              <Card className="p-8 border-2 bg-primary/5">
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center p-4 bg-background rounded-lg border-2">
+                    <Icon name="Cog" size={40} className="text-primary mx-auto mb-3" />
+                    <div className="text-3xl font-bold text-foreground mb-2">12</div>
+                    <div className="text-sm text-muted-foreground font-medium">Видов техники</div>
+                  </div>
+                  <div className="text-center p-4 bg-background rounded-lg border-2">
+                    <Icon name="TrendingDown" size={40} className="text-primary mx-auto mb-3" />
+                    <div className="text-3xl font-bold text-foreground mb-2">-30%</div>
+                    <div className="text-sm text-muted-foreground font-medium">Снижение стоимости</div>
+                  </div>
+                  <div className="text-center p-4 bg-background rounded-lg border-2">
+                    <Icon name="Clock" size={40} className="text-primary mx-auto mb-3" />
+                    <div className="text-3xl font-bold text-foreground mb-2">15-45</div>
+                    <div className="text-sm text-muted-foreground font-medium">Дней на производство</div>
+                  </div>
+                  <div className="text-center p-4 bg-background rounded-lg border-2">
+                    <Icon name="MapPin" size={40} className="text-primary mx-auto mb-3" />
+                    <div className="text-3xl font-bold text-foreground mb-2">4</div>
+                    <div className="text-sm text-muted-foreground font-medium">Федеральных округа</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-8 border-2">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Icon name="Factory" size={32} className="text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-foreground mb-3">Импортозамещение</div>
+                    <p className="text-muted-foreground">
+                      Переход на отечественные комплектующие снижает стоимость на <span className="font-bold text-foreground">20-30%</span> при сохранении качества.
+                    </p>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-8 border-2 bg-gradient-to-br from-primary/10 to-primary/5">
+                <div className="flex items-start gap-4">
+                  <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                    <Icon name="Wrench" size={32} className="text-primary-foreground" />
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-foreground mb-3">Сервисное обслуживание</div>
+                    <p className="text-muted-foreground">
+                      Гарантийное и сервисное обслуживание по территориальному принципу: <span className="font-semibold">Центральный, Северо-Западный, Южный и Уральский</span> Федеральные округа.
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Card className="p-6 text-center border-2 hover:border-primary/50 transition-colors">
+              <Icon name="PackageCheck" size={48} className="text-primary mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-foreground mb-2">Российские комплектующие</h3>
+              <p className="text-muted-foreground text-sm">
+                Производство из отечественных материалов с привлечением опыта зарубежных компаний
+              </p>
+            </Card>
+            <Card className="p-6 text-center border-2 hover:border-primary/50 transition-colors">
+              <Icon name="Truck" size={48} className="text-primary mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-foreground mb-2">Переоборудование</h3>
+              <p className="text-muted-foreground text-sm">
+                Монтаж нового технологического оборудования на автотранспорт заказчиков
+              </p>
+            </Card>
+            <Card className="p-6 text-center border-2 hover:border-primary/50 transition-colors">
+              <Icon name="Sparkles" size={48} className="text-primary mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-foreground mb-2">Инновации</h3>
+              <p className="text-muted-foreground text-sm">
+                Реализация традиционных методов ремонта и метода пневмонабрызга
+              </p>
+            </Card>
           </div>
         </div>
       </section>
