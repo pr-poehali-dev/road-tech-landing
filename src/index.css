@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -34,7 +34,7 @@
     --input: 210 15% 88%;
     --ring: 210 100% 45%;
 
-    --radius: 0.25rem;
+    --radius: 0rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,10 +100,12 @@
   body {
     @apply bg-background text-foreground;
     font-family:
-      "Inter",
+      "Epilogue",
       system-ui,
       -apple-system,
       sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
   h1,
@@ -113,11 +115,27 @@
   h5,
   h6 {
     font-family:
-      "Inter",
+      "Epilogue",
       system-ui,
       -apple-system,
       sans-serif;
     font-weight: 700;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 600;
   }
 }
