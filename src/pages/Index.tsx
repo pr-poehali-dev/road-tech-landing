@@ -116,7 +116,7 @@ const Index = () => {
       <section className="pt-20 px-6 relative overflow-hidden min-h-[85vh] flex items-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(https://cdn.poehali.dev/projects/2c87acdf-ed4a-4fac-bb52-5b655f0cb647/files/de6570ba-560c-44b4-84e1-2cab7ac4d750.jpg)' }}
+          style={{ backgroundImage: 'url(https://cdn.poehali.dev/files/5c617275-b7c9-44ae-8975-b37b0003ebcb.jpg)' }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/90 to-slate-900/70"></div>
         
