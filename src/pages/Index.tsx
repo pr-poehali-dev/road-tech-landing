@@ -150,8 +150,8 @@ const Index = () => {
                 <div className="text-sm text-white/80 font-medium">Лет на рынке</div>
               </div>
               <div className="text-center md:text-left">
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">4</div>
-                <div className="text-sm text-white/80 font-medium">Федеральных округа</div>
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">5</div>
+                <div className="text-sm text-white/80 font-medium">Патентов получено</div>
               </div>
             </div>
           </div>
