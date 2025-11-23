@@ -95,9 +95,11 @@ const Index = () => {
               <span className="text-xl font-semibold text-foreground">ДОРПРОМ</span>
             </div>
             <div className="hidden md:flex items-center gap-6">
-              <a href="#about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">О компании</a>
-              <a href="#catalog" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Продукция</a>
-              <a href="#service" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Сервис</a>
+              <a href="#about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">О нас</a>
+              <a href="#catalog" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Каталог</a>
+              <a href="#certificates" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Сертификаты</a>
+              <a href="#patents" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Патенты</a>
+              <a href="#partners" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Партнеры</a>
               <a href="#contacts" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Контакты</a>
             </div>
             <Button size="sm" className="hidden md:flex">
