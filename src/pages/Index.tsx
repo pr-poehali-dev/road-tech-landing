@@ -270,31 +270,6 @@ const Index = () => {
             </div>
 
             <div className="space-y-4">
-              <Card className="p-6 shadow-sm bg-slate-50">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center p-4 bg-white rounded">
-                    <Icon name="Cog" size={40} className="text-primary mx-auto mb-2" strokeWidth={1.5} />
-                    <div className="text-2xl font-bold text-foreground mb-1">12</div>
-                    <div className="text-xs text-muted-foreground">Видов техники</div>
-                  </div>
-                  <div className="text-center p-4 bg-white rounded">
-                    <Icon name="TrendingDown" size={40} className="text-primary mx-auto mb-2" strokeWidth={1.5} />
-                    <div className="text-2xl font-bold text-foreground mb-1">-30%</div>
-                    <div className="text-xs text-muted-foreground">Снижение стоимости</div>
-                  </div>
-                  <div className="text-center p-4 bg-white rounded">
-                    <Icon name="Clock" size={40} className="text-primary mx-auto mb-2" strokeWidth={1.5} />
-                    <div className="text-2xl font-bold text-foreground mb-1">15-45</div>
-                    <div className="text-xs text-muted-foreground">Дней на производство</div>
-                  </div>
-                  <div className="text-center p-4 bg-white rounded">
-                    <Icon name="MapPin" size={40} className="text-primary mx-auto mb-2" strokeWidth={1.5} />
-                    <div className="text-2xl font-bold text-foreground mb-1">4</div>
-                    <div className="text-xs text-muted-foreground">Федеральных округа</div>
-                  </div>
-                </div>
-              </Card>
-
               <Card className="p-6 shadow-sm">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
