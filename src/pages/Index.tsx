@@ -125,22 +125,12 @@ const Index = () => {
               <span className="text-primary font-semibold text-sm tracking-wide">ПРОИЗВОДСТВО С 1992 ГОДА</span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-tight">
-              Производство дорожной<br />спецтехники
+              Дорпром Интернациональ
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl leading-relaxed">
               Разработка и производство оборудования для строительства, ремонта и содержания дорог
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="font-medium shadow-xl hover:shadow-2xl transition-all px-8">
-                Смотреть каталог
-                <Icon name="ArrowRight" size={18} className="ml-2" strokeWidth={1.5} />
-              </Button>
-              <Button size="lg" variant="outline" className="font-medium border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-foreground transition-all px-8">
-                <Icon name="FileText" size={18} className="mr-2" strokeWidth={1.5} />
-                Скачать прайс
-              </Button>
-            </div>
-            <div className="grid grid-cols-3 gap-8 mt-16 pt-10 border-t border-white/20">
+            <div className="grid grid-cols-3 gap-8 mt-10 pt-10 border-t border-white/20">
               <div className="text-center md:text-left">
                 <div className="text-4xl md:text-5xl font-bold text-primary mb-2">12</div>
                 <div className="text-sm text-white/80 font-medium">Видов техники</div>
