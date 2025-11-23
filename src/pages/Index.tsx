@@ -41,39 +41,43 @@ const Index = () => {
       title: "Асфальто-бетонные заводы",
       icon: "Factory",
       description: "Стационарные и мобильные АБЗ для производства качественных смесей",
-      image: "https://cdn.poehali.dev/projects/2c87acdf-ed4a-4fac-bb52-5b655f0cb647/files/f12c68b7-611c-4c83-93dd-855b09934a80.jpg"
+      image: "https://cdn.poehali.dev/files/4dda6f12-e705-4690-b945-ab36534b83fe.jpg"
     },
     {
       title: "Ремонтеры дорожных покрытий",
       icon: "Wrench",
       description: "Современное оборудование для эффективного ремонта дорог",
-      image: "https://cdn.poehali.dev/projects/2c87acdf-ed4a-4fac-bb52-5b655f0cb647/files/08833dc0-b561-41fc-9380-6bb4b4eb0444.jpg"
+      image: "https://cdn.poehali.dev/files/8fb274df-9782-45bf-ab08-b4f47da85e3f.jpg"
     },
     {
       title: "Разметочные машины",
       icon: "PaintBucket",
       description: "Профессиональная техника для нанесения дорожной разметки",
-      image: "https://cdn.poehali.dev/projects/2c87acdf-ed4a-4fac-bb52-5b655f0cb647/files/4ed3be1c-a1b7-4d76-b396-83d1afefdcd4.jpg"
+      image: "https://cdn.poehali.dev/files/e9dbe27f-1ec7-48b3-9fff-f3e3c489ef2b.jpg"
     },
     {
       title: "Битумные котлы для заливки швов",
       icon: "Flame",
-      description: "Надёжные котлы для работы с битумными материалами"
+      description: "Надёжные котлы для работы с битумными материалами",
+      image: "https://cdn.poehali.dev/files/e8317f3f-73fe-4040-a813-746790344550.jpg"
     },
     {
       title: "Поливомоечное оборудование",
       icon: "Droplets",
-      description: "Эффективная техника для поддержания чистоты дорог"
+      description: "Эффективная техника для поддержания чистоты дорог",
+      image: "https://cdn.poehali.dev/files/4bc44291-b31e-4a77-852f-4751a15f4a63.jpg"
     },
     {
       title: "Пескоразбрасывающее оборудование",
       icon: "Wind",
-      description: "Техника для зимнего содержания и борьбы с гололёдом"
+      description: "Техника для зимнего содержания и борьбы с гололёдом",
+      image: "https://cdn.poehali.dev/files/2af0fc52-c1c9-43d5-8e28-5b6479f2cdc7.jpg"
     },
     {
       title: "Автомобильные прицепы",
       icon: "Truck",
-      description: "Прочные прицепы для транспортировки оборудования"
+      description: "Прочные прицепы для транспортировки оборудования",
+      image: "https://cdn.poehali.dev/files/668e402c-52cd-4fee-8838-51201b98e845.jpg"
     }
   ];
 
