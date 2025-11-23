@@ -202,6 +202,16 @@ const Index = () => {
               </Card>
             ))}
           </div>
+          
+          <div className="mt-12 text-center">
+            <p className="text-base text-muted-foreground mb-6">
+              Не нашли нужную технику или хотите узнать подробнее?
+            </p>
+            <Button size="lg" className="font-medium shadow-lg hover:shadow-xl transition-all px-8">
+              <Icon name="Phone" size={18} className="mr-2" strokeWidth={1.5} />
+              Получить консультацию
+            </Button>
+          </div>
         </div>
       </section>
 
