@@ -97,11 +97,11 @@ const Index = () => {
               <a href="#contacts" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Контакты</a>
             </div>
             <Button size="sm" className="hidden md:flex">
-              <Icon name="Phone" size={16} className="mr-2" />
+              <Icon name="Phone" size={16} className="mr-2" strokeWidth={1.5} />
               Связаться
             </Button>
             <Button variant="ghost" size="icon" className="md:hidden">
-              <Icon name="Menu" size={24} />
+              <Icon name="Menu" size={24} strokeWidth={1.5} />
             </Button>
           </nav>
         </div>
@@ -129,10 +129,10 @@ const Index = () => {
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="font-medium shadow-xl hover:shadow-2xl transition-all px-8">
                 Смотреть каталог
-                <Icon name="ArrowRight" size={18} className="ml-2" />
+                <Icon name="ArrowRight" size={18} className="ml-2" strokeWidth={1.5} />
               </Button>
               <Button size="lg" variant="outline" className="font-medium border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-foreground transition-all px-8">
-                <Icon name="FileText" size={18} className="mr-2" />
+                <Icon name="FileText" size={18} className="mr-2" strokeWidth={1.5} />
                 Скачать прайс
               </Button>
             </div>
@@ -154,7 +154,7 @@ const Index = () => {
         </div>
         
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
-          <Icon name="ChevronDown" size={32} className="text-white/60" />
+          <Icon name="ChevronDown" size={32} className="text-white/60" strokeWidth={1.5} />
         </div>
       </section>
 
@@ -171,8 +171,8 @@ const Index = () => {
             <div className="space-y-4">
               <Card className="p-6 shadow-sm">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Icon name="CalendarCheck" size={24} className="text-primary" />
+                  <div className="flex-shrink-0">
+                    <Icon name="CalendarCheck" size={32} className="text-primary" strokeWidth={1.5} />
                   </div>
                   <div>
                     <div className="text-3xl font-bold text-primary mb-2">1992</div>
@@ -185,8 +185,8 @@ const Index = () => {
 
               <Card className="p-6 shadow-sm">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Icon name="Globe" size={24} className="text-primary" />
+                  <div className="flex-shrink-0">
+                    <Icon name="Globe" size={32} className="text-primary" strokeWidth={1.5} />
                   </div>
                   <div>
                     <div className="text-lg font-bold text-foreground mb-2">Дорпром Интернациональ</div>
@@ -199,8 +199,8 @@ const Index = () => {
 
               <Card className="p-6 shadow-sm">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Icon name="Award" size={24} className="text-primary" />
+                  <div className="flex-shrink-0">
+                    <Icon name="Award" size={32} className="text-primary" strokeWidth={1.5} />
                   </div>
                   <div>
                     <div className="text-lg font-bold text-foreground mb-2">Качество и сертификация</div>
@@ -216,22 +216,22 @@ const Index = () => {
               <Card className="p-6 shadow-sm bg-slate-50">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center p-4 bg-white rounded">
-                    <Icon name="Cog" size={32} className="text-primary mx-auto mb-2" />
+                    <Icon name="Cog" size={40} className="text-primary mx-auto mb-2" strokeWidth={1.5} />
                     <div className="text-2xl font-bold text-foreground mb-1">12</div>
                     <div className="text-xs text-muted-foreground">Видов техники</div>
                   </div>
                   <div className="text-center p-4 bg-white rounded">
-                    <Icon name="TrendingDown" size={32} className="text-primary mx-auto mb-2" />
+                    <Icon name="TrendingDown" size={40} className="text-primary mx-auto mb-2" strokeWidth={1.5} />
                     <div className="text-2xl font-bold text-foreground mb-1">-30%</div>
                     <div className="text-xs text-muted-foreground">Снижение стоимости</div>
                   </div>
                   <div className="text-center p-4 bg-white rounded">
-                    <Icon name="Clock" size={32} className="text-primary mx-auto mb-2" />
+                    <Icon name="Clock" size={40} className="text-primary mx-auto mb-2" strokeWidth={1.5} />
                     <div className="text-2xl font-bold text-foreground mb-1">15-45</div>
                     <div className="text-xs text-muted-foreground">Дней на производство</div>
                   </div>
                   <div className="text-center p-4 bg-white rounded">
-                    <Icon name="MapPin" size={32} className="text-primary mx-auto mb-2" />
+                    <Icon name="MapPin" size={40} className="text-primary mx-auto mb-2" strokeWidth={1.5} />
                     <div className="text-2xl font-bold text-foreground mb-1">4</div>
                     <div className="text-xs text-muted-foreground">Федеральных округа</div>
                   </div>
@@ -240,8 +240,8 @@ const Index = () => {
 
               <Card className="p-6 shadow-sm">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Icon name="Factory" size={24} className="text-primary" />
+                  <div className="flex-shrink-0">
+                    <Icon name="Factory" size={32} className="text-primary" strokeWidth={1.5} />
                   </div>
                   <div>
                     <div className="text-lg font-bold text-foreground mb-2">Импортозамещение</div>
@@ -254,8 +254,8 @@ const Index = () => {
 
               <Card className="p-6 shadow-sm">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Icon name="Wrench" size={24} className="text-primary" />
+                  <div className="flex-shrink-0">
+                    <Icon name="Wrench" size={32} className="text-primary" strokeWidth={1.5} />
                   </div>
                   <div>
                     <div className="text-lg font-bold text-foreground mb-2">Сервисное обслуживание</div>
@@ -270,21 +270,21 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Card className="p-5 text-center shadow-sm hover:shadow-md transition-shadow">
-              <Icon name="PackageCheck" size={40} className="text-primary mx-auto mb-3" />
+              <Icon name="PackageCheck" size={48} className="text-primary mx-auto mb-3" strokeWidth={1.5} />
               <h3 className="text-base font-bold text-foreground mb-2">Российские комплектующие</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Производство из отечественных материалов с привлечением опыта зарубежных компаний
               </p>
             </Card>
             <Card className="p-5 text-center shadow-sm hover:shadow-md transition-shadow">
-              <Icon name="Truck" size={40} className="text-primary mx-auto mb-3" />
+              <Icon name="Truck" size={48} className="text-primary mx-auto mb-3" strokeWidth={1.5} />
               <h3 className="text-base font-bold text-foreground mb-2">Переоборудование</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Монтаж нового технологического оборудования на автотранспорт заказчиков
               </p>
             </Card>
             <Card className="p-5 text-center shadow-sm hover:shadow-md transition-shadow">
-              <Icon name="Sparkles" size={40} className="text-primary mx-auto mb-3" />
+              <Icon name="Sparkles" size={48} className="text-primary mx-auto mb-3" strokeWidth={1.5} />
               <h3 className="text-base font-bold text-foreground mb-2">Инновации</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Реализация традиционных методов ремонта и метода пневмонабрызга
@@ -318,15 +318,15 @@ const Index = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <div className="absolute bottom-3 left-3">
                       <div className="w-10 h-10 rounded bg-white flex items-center justify-center">
-                        <Icon name={category.icon} size={20} className="text-primary" />
+                        <Icon name={category.icon} size={20} className="text-primary" strokeWidth={1.5} />
                       </div>
                     </div>
                   </div>
                 )}
                 <CardContent className="p-5">
                   {!category.image && (
-                    <div className="w-12 h-12 rounded bg-primary/5 flex items-center justify-center mb-3">
-                      <Icon name={category.icon} size={24} className="text-primary" />
+                    <div className="mb-3">
+                      <Icon name={category.icon} size={32} className="text-primary" strokeWidth={1.5} />
                     </div>
                   )}
                   <h3 className="text-sm font-bold text-foreground mb-2 leading-tight">
@@ -353,8 +353,8 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="shadow-sm">
               <CardContent className="p-6">
-                <div className="w-12 h-12 rounded bg-primary/5 flex items-center justify-center mb-4">
-                  <Icon name="Settings" size={24} className="text-primary" />
+                <div className="mb-4">
+                  <Icon name="Settings" size={40} className="text-primary" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-base font-bold text-foreground mb-2">Гарантийное обслуживание</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
@@ -364,8 +364,8 @@ const Index = () => {
             </Card>
             <Card className="shadow-sm">
               <CardContent className="p-6">
-                <div className="w-12 h-12 rounded bg-primary/5 flex items-center justify-center mb-4">
-                  <Icon name="Package" size={24} className="text-primary" />
+                <div className="mb-4">
+                  <Icon name="Package" size={40} className="text-primary" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-base font-bold text-foreground mb-2">Запасные части</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
@@ -375,8 +375,8 @@ const Index = () => {
             </Card>
             <Card className="shadow-sm">
               <CardContent className="p-6">
-                <div className="w-12 h-12 rounded bg-primary/5 flex items-center justify-center mb-4">
-                  <Icon name="Users" size={24} className="text-primary" />
+                <div className="mb-4">
+                  <Icon name="Users" size={40} className="text-primary" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-base font-bold text-foreground mb-2">Обучение операторов</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
@@ -403,8 +403,8 @@ const Index = () => {
                 <Card className="shadow-sm">
                   <CardContent className="p-5">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded bg-primary/5 flex items-center justify-center flex-shrink-0">
-                        <Icon name="Phone" size={20} className="text-primary" />
+                      <div className="flex-shrink-0">
+                        <Icon name="Phone" size={28} className="text-primary" strokeWidth={1.5} />
                       </div>
                       <div>
                         <h4 className="font-semibold text-foreground text-sm mb-0.5">Телефон</h4>
@@ -416,8 +416,8 @@ const Index = () => {
                 <Card className="shadow-sm">
                   <CardContent className="p-5">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded bg-primary/5 flex items-center justify-center flex-shrink-0">
-                        <Icon name="Mail" size={20} className="text-primary" />
+                      <div className="flex-shrink-0">
+                        <Icon name="Mail" size={28} className="text-primary" strokeWidth={1.5} />
                       </div>
                       <div>
                         <h4 className="font-semibold text-foreground text-sm mb-0.5">Email</h4>
@@ -429,8 +429,8 @@ const Index = () => {
                 <Card className="shadow-sm">
                   <CardContent className="p-5">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded bg-primary/5 flex items-center justify-center flex-shrink-0">
-                        <Icon name="MapPin" size={20} className="text-primary" />
+                      <div className="flex-shrink-0">
+                        <Icon name="MapPin" size={28} className="text-primary" strokeWidth={1.5} />
                       </div>
                       <div>
                         <h4 className="font-semibold text-foreground text-sm mb-0.5">Адрес</h4>
