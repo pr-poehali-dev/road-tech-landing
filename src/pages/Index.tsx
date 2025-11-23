@@ -318,6 +318,25 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="px-6 relative overflow-hidden min-h-[70vh] flex items-center">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: 'url(https://cdn.poehali.dev/files/e409c0ab-f8eb-4d61-b2fe-3200a680d1bd.jpg)' }}
+        ></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/90 to-slate-900/70"></div>
+        
+        <div className="container mx-auto relative z-20 py-20">
+          <div className="max-w-4xl">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
+              Сервисное обслуживание
+            </h2>
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
+              Полное гарантийное и сервисное обслуживание техники по территориальному принципу: Центральный, Северо-Западный, Южный и Уральский Федеральные округа.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section id="contacts" className="py-16 px-6 bg-white">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
