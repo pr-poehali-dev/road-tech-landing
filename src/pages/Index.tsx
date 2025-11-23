@@ -474,7 +474,7 @@ const Index = () => {
                           name="message"
                           value={formData.message}
                           onChange={handleInputChange}
-                          placeholder="Расскажите о вашем проекте или задайте вопрос..."
+                          placeholder="Расскажите о ваших потребностях или задайте вопрос..."
                           rows={5}
                           required
                           disabled={isSubmitting}
@@ -543,7 +543,7 @@ const Index = () => {
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-3 text-sm">Меню</h4>
+              <h4 className="font-semibold mb-3 text-sm">Разделы</h4>
               <ul className="space-y-2 text-sm text-slate-400">
                 <li><a href="#about" className="hover:text-white transition-colors">О нас</a></li>
                 <li><a href="#catalog" className="hover:text-white transition-colors">Каталог</a></li>
