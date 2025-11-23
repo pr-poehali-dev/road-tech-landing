@@ -543,32 +543,32 @@ const Index = () => {
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-3 text-sm">Продукция</h4>
+              <h4 className="font-semibold mb-3 text-sm">Меню</h4>
               <ul className="space-y-2 text-sm text-slate-400">
-                <li>Асфальто-бетонные заводы</li>
-                <li>Ремонтеры покрытий</li>
-                <li>Разметочные машины</li>
+                <li><a href="#about" className="hover:text-white transition-colors">О нас</a></li>
+                <li><a href="#catalog" className="hover:text-white transition-colors">Каталог</a></li>
+                <li><a href="#certificates" className="hover:text-white transition-colors">Сертификаты</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-3 text-sm">Компания</h4>
+              <h4 className="font-semibold mb-3 text-sm">&nbsp;</h4>
               <ul className="space-y-2 text-sm text-slate-400">
-                <li>О нас</li>
-                <li>Сертификаты</li>
-                <li>Вакансии</li>
+                <li><a href="#patents" className="hover:text-white transition-colors">Патенты</a></li>
+                <li><a href="#partners" className="hover:text-white transition-colors">Партнеры</a></li>
+                <li><a href="#contacts" className="hover:text-white transition-colors">Контакты</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-3 text-sm">Контакты</h4>
               <ul className="space-y-2 text-sm text-slate-400">
-                <li>+7 (495) 123-45-67</li>
-                <li>info@dortehprom.ru</li>
-                <li>Москва, ул. Промышленная, 25</li>
+                <li>+7 (495) 773-41-57</li>
+                <li>dorprom@mail.ru</li>
+                <li>МО, г. Пушкино, мкр-н Мамонтовка, ул. 2-я Полевая, д. 26</li>
               </ul>
             </div>
           </div>
           <div className="border-t border-slate-700 pt-6 text-center text-sm text-slate-500">
-            © 2024 ДОРПРОМ. Все права защищены.
+            © 1992-2025 Дорпром Интернациональ. Все права защищены.
           </div>
         </div>
       </footer>
