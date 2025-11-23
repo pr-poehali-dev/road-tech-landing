@@ -318,53 +318,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="service" className="py-16 px-6 bg-white">
-        <div className="container mx-auto">
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-3">Сервисное обслуживание</h2>
-            <p className="text-base text-muted-foreground">
-              Полный комплекс услуг по техническому обслуживанию
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card className="shadow-sm">
-              <CardContent className="p-6">
-                <div className="mb-4">
-                  <Icon name="Settings" size={40} className="text-primary" strokeWidth={1.5} />
-                </div>
-                <h3 className="text-base font-bold text-foreground mb-2">Гарантийное обслуживание</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Полное гарантийное обслуживание на всё оборудование с выездом специалистов
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="shadow-sm">
-              <CardContent className="p-6">
-                <div className="mb-4">
-                  <Icon name="Package" size={40} className="text-primary" strokeWidth={1.5} />
-                </div>
-                <h3 className="text-base font-bold text-foreground mb-2">Запасные части</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Собственный склад оригинальных запчастей с оперативной доставкой
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="shadow-sm">
-              <CardContent className="p-6">
-                <div className="mb-4">
-                  <Icon name="Users" size={40} className="text-primary" strokeWidth={1.5} />
-                </div>
-                <h3 className="text-base font-bold text-foreground mb-2">Обучение операторов</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Программы обучения для эффективной работы с нашей техникой
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      <section id="contacts" className="py-16 px-6 bg-slate-50">
+      <section id="contacts" className="py-16 px-6 bg-white">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="mb-12">
