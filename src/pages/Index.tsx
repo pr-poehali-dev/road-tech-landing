@@ -162,6 +162,49 @@ const Index = () => {
         </div>
       </section>
 
+      <section id="catalog" className="py-16 px-6 bg-slate-50">
+        <div className="container mx-auto">
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-foreground mb-3">Каталог продукции</h2>
+            <p className="text-base text-muted-foreground">
+              Широкий ассортимент дорожно-строительной техники
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            {categories.map((category, index) => (
+              <Card 
+                key={index} 
+                className="group hover:shadow-md transition-shadow cursor-pointer overflow-hidden"
+              >
+                {category.image && (
+                  <div className="relative h-44 overflow-hidden">
+                    <img 
+                      src={category.image} 
+                      alt={category.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  </div>
+                )}
+                <CardContent className="p-5">
+                  {!category.image && (
+                    <div className="mb-3">
+                      <Icon name={category.icon} size={32} className="text-primary" strokeWidth={1.5} />
+                    </div>
+                  )}
+                  <h3 className="text-sm font-bold text-foreground mb-2 leading-tight">
+                    {category.title}
+                  </h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    {category.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="about" className="py-16 px-6 bg-white">
         <div className="container mx-auto">
           <div className="mb-12">
@@ -294,49 +337,6 @@ const Index = () => {
                 Реализация традиционных методов ремонта и метода пневмонабрызга
               </p>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      <section id="catalog" className="py-16 px-6 bg-slate-50">
-        <div className="container mx-auto">
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-3">Каталог продукции</h2>
-            <p className="text-base text-muted-foreground">
-              Широкий ассортимент дорожно-строительной техники
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-            {categories.map((category, index) => (
-              <Card 
-                key={index} 
-                className="group hover:shadow-md transition-shadow cursor-pointer overflow-hidden"
-              >
-                {category.image && (
-                  <div className="relative h-44 overflow-hidden">
-                    <img 
-                      src={category.image} 
-                      alt={category.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  </div>
-                )}
-                <CardContent className="p-5">
-                  {!category.image && (
-                    <div className="mb-3">
-                      <Icon name={category.icon} size={32} className="text-primary" strokeWidth={1.5} />
-                    </div>
-                  )}
-                  <h3 className="text-sm font-bold text-foreground mb-2 leading-tight">
-                    {category.title}
-                  </h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">
-                    {category.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
