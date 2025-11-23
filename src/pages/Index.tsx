@@ -102,10 +102,16 @@ const Index = () => {
               <a href="#partners" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Партнеры</a>
               <a href="#contacts" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Контакты</a>
             </div>
-            <Button size="sm" className="hidden md:flex">
-              <Icon name="Phone" size={16} className="mr-2" strokeWidth={1.5} />
-              Связаться
-            </Button>
+            <div className="hidden md:flex items-center gap-4">
+              <a href="tel:+74957734157" className="flex items-center gap-2 text-sm font-semibold text-foreground hover:text-primary transition-colors">
+                <Icon name="Phone" size={18} strokeWidth={1.5} />
+                +7 (495) 773-41-57
+              </a>
+              <Button size="sm" className="hidden xl:flex">
+                <Icon name="Phone" size={16} className="mr-2" strokeWidth={1.5} />
+                Связаться
+              </Button>
+            </div>
             <Button variant="ghost" size="icon" className="md:hidden">
               <Icon name="Menu" size={24} strokeWidth={1.5} />
             </Button>
