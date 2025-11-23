@@ -224,74 +224,71 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            <div className="space-y-4">
-              <Card className="p-6 shadow-sm">
+          <div className="grid grid-cols-1 gap-6 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Card className="p-8 shadow-sm">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
-                    <Icon name="CalendarCheck" size={32} className="text-primary" strokeWidth={1.5} />
+                    <Icon name="CalendarCheck" size={40} className="text-primary" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-primary mb-2">1992</div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <div className="text-4xl font-bold text-primary mb-3">1992</div>
+                    <p className="text-base text-muted-foreground leading-relaxed">
                       Фирма «ДОРПРОМ» зарегистрирована в Подмосковье. За время деятельности разработано, запатентовано и изготовлено <span className="font-semibold text-foreground">12 видов машин</span> для дорожного, лесного и сельского хозяйства.
                     </p>
                   </div>
                 </div>
               </Card>
 
-              <Card className="p-6 shadow-sm">
+              <Card className="p-8 shadow-sm">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
-                    <Icon name="Globe" size={32} className="text-primary" strokeWidth={1.5} />
+                    <Icon name="Globe" size={40} className="text-primary" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <div className="text-lg font-bold text-foreground mb-2">Дорпром Интернациональ</div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <div className="text-xl font-bold text-foreground mb-3">Дорпром Интернациональ</div>
+                    <p className="text-base text-muted-foreground leading-relaxed">
                       Сотрудничество с зарубежными компаниями: <span className="font-medium">Виртген, Бомаг, Цедима</span> (Германия), <span className="font-medium">Динапак, Партнер</span> (Швеция), <span className="font-medium">Бернарди</span> (Италия).
                     </p>
                   </div>
                 </div>
               </Card>
 
-              <Card className="p-6 shadow-sm">
+              <Card className="p-8 shadow-sm">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
-                    <Icon name="Award" size={32} className="text-primary" strokeWidth={1.5} />
+                    <Icon name="Award" size={40} className="text-primary" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <div className="text-lg font-bold text-foreground mb-2">Качество и сертификация</div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <div className="text-xl font-bold text-foreground mb-3">Качество и сертификация</div>
+                    <p className="text-base text-muted-foreground leading-relaxed">
                       Все машины имеют сертификаты и одобрения типа ТС. Срок производства от <span className="font-semibold text-foreground">15 до 45 дней</span>.
                     </p>
                   </div>
                 </div>
               </Card>
-            </div>
-
-            <div className="space-y-4">
-              <Card className="p-6 shadow-sm">
+              <Card className="p-8 shadow-sm">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
-                    <Icon name="Factory" size={32} className="text-primary" strokeWidth={1.5} />
+                    <Icon name="Factory" size={40} className="text-primary" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <div className="text-lg font-bold text-foreground mb-2">Импортозамещение</div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <div className="text-xl font-bold text-foreground mb-3">Импортозамещение</div>
+                    <p className="text-base text-muted-foreground leading-relaxed">
                       Переход на отечественные комплектующие снижает стоимость на <span className="font-semibold text-foreground">20-30%</span> при сохранении качества.
                     </p>
                   </div>
                 </div>
               </Card>
 
-              <Card className="p-6 shadow-sm">
+              <Card className="p-8 shadow-sm">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
-                    <Icon name="Wrench" size={32} className="text-primary" strokeWidth={1.5} />
+                    <Icon name="Wrench" size={40} className="text-primary" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <div className="text-lg font-bold text-foreground mb-2">Сервисное обслуживание</div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <div className="text-xl font-bold text-foreground mb-3">Сервисное обслуживание</div>
+                    <p className="text-base text-muted-foreground leading-relaxed">
                       Гарантийное и сервисное обслуживание по территориальному принципу: <span className="font-medium">Центральный, Северо-Западный, Южный и Уральский</span> Федеральные округа.
                     </p>
                   </div>
