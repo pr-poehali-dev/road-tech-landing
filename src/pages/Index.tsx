@@ -276,19 +276,6 @@ const Index = () => {
                 </div>
               </Card>
 
-              <Card className="p-6 shadow-sm">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0">
-                    <Icon name="Wrench" size={32} className="text-primary" strokeWidth={1.5} />
-                  </div>
-                  <div>
-                    <div className="text-lg font-bold text-foreground mb-2">Сервисное обслуживание</div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      Гарантийное и сервисное обслуживание по территориальному принципу: <span className="font-medium">Центральный, Северо-Западный, Южный и Уральский</span> Федеральные округа.
-                    </p>
-                  </div>
-                </div>
-              </Card>
             </div>
           </div>
 
