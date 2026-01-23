@@ -108,15 +108,10 @@ const Index = () => {
       </header>
 
       <section className="pt-20 px-6 relative overflow-hidden min-h-[85vh] flex items-center">
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="https://videos2.sendvid.com/a7/57/qsg88lyn.mp4" type="video/mp4" />
-        </video>
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: 'url(https://cdn.poehali.dev/files/9c22e603-df9c-4b19-8488-a4ff6c7094aa.jpg)' }}
+        ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/90 to-slate-900/70"></div>
         
         <div className="container mx-auto relative z-20 py-20 md:py-24">
