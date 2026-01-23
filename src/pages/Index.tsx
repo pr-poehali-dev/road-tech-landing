@@ -38,34 +38,22 @@ const Index = () => {
 
   const categories = [
     {
-      title: "Асфальто-бетонные заводы",
-      icon: "Factory",
-      description: "Стационарные и мобильные АБЗ для производства качественных смесей",
-      image: "https://cdn.poehali.dev/files/4dda6f12-e705-4690-b945-ab36534b83fe.jpg"
-    },
-    {
-      title: "Ремонтеры дорожных покрытий",
+      title: "Ремонтер дорожный РД-925",
       icon: "Wrench",
-      description: "Современное оборудование для эффективного ремонта дорог",
-      image: "https://cdn.poehali.dev/files/8fb274df-9782-45bf-ab08-b4f47da85e3f.jpg"
+      description: "Для ремонта и содержания дорог литым асфальтом (зима-лето)",
+      image: "https://cdn.poehali.dev/files/e413111d-a601-4498-8e33-136fd87b9578.jpeg"
     },
     {
-      title: "Разметочные машины",
-      icon: "PaintBucket",
-      description: "Профессиональная техника для нанесения дорожной разметки",
-      image: "https://cdn.poehali.dev/files/e9dbe27f-1ec7-48b3-9fff-f3e3c489ef2b.jpg"
+      title: "Ремонтер дорожный РД-927",
+      icon: "Wrench",
+      description: "Для ремонта и содержания дорог асфальто-бетонной смесью в межсезонье",
+      image: "https://cdn.poehali.dev/files/1fa98e41-9dcc-459e-b769-9bf9ece9eac5.jpg"
     },
     {
-      title: "Битумные котлы для заливки швов",
+      title: "Самоходный заливщик швов РД-929",
       icon: "Flame",
-      description: "Надёжные котлы для работы с битумными материалами",
-      image: "https://cdn.poehali.dev/files/e8317f3f-73fe-4040-a813-746790344550.jpg"
-    },
-    {
-      title: "Поливомоечное оборудование",
-      icon: "Droplets",
-      description: "Эффективная техника для поддержания чистоты дорог",
-      image: "https://cdn.poehali.dev/files/4bc44291-b31e-4a77-852f-4751a15f4a63.jpg"
+      description: "Профессиональное оборудование для заливки швов дорожных покрытий",
+      image: "https://cdn.poehali.dev/files/59e7c03d-f6e9-4733-963e-66847d8d15e4.jpg"
     },
     {
       title: "Пескоразбрасывающее оборудование",
