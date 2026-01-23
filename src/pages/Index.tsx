@@ -163,7 +163,7 @@ const Index = () => {
                 className="group hover:shadow-md transition-shadow cursor-pointer overflow-hidden"
               >
                 {category.image && (
-                  <div className="relative h-44 overflow-hidden">
+                  <div className="relative h-64 overflow-hidden">
                     <img 
                       src={category.image} 
                       alt={category.title}
