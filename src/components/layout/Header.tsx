@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 
-const ProductHeader = () => {
+const Header = () => {
   return (
     <header className="fixed top-0 w-full bg-white border-b border-border z-50 shadow-sm">
       <div className="container mx-auto px-6 py-3">
@@ -41,4 +41,4 @@ const ProductHeader = () => {
   );
 };
 
-export default ProductHeader;
+export default Header;
