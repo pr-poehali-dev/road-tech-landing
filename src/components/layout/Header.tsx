@@ -28,7 +28,6 @@ const Header = () => {
               +7 (495) 773-41-57
             </a>
             <Button size="sm" className="hidden xl:flex">
-              <Icon name="Phone" size={16} className="mr-2" strokeWidth={1.5} />
               Связаться
             </Button>
           </div>

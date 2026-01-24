@@ -151,14 +151,14 @@ const Product = () => {
 
                 <div className="flex items-center gap-6 mb-8 pb-8 border-b border-border">
                   <div>
-                    <div className="text-3xl font-bold text-foreground">От 2 500 000 ₽</div>
-                    <div className="text-sm text-muted-foreground">Цена зависит от комплектации</div>
+                    <div className="text-lg font-semibold text-muted-foreground mb-1">Цена: по запросу</div>
+                    <div className="text-sm text-muted-foreground">Зависит от комплектации</div>
                   </div>
                 </div>
 
                 <div className="space-y-4 mb-8">
                   <Button size="lg" className="w-full text-base font-semibold">
-                    <Icon name="Phone" size={20} className="mr-2" />
+                    <Icon name="Mail" size={20} className="mr-2" />
                     Получить коммерческое предложение
                   </Button>
                   <Button size="lg" variant="outline" className="w-full text-base font-semibold">
