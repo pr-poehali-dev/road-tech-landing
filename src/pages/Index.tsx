@@ -125,36 +125,43 @@ const Index = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {categories.map((category, index) => (
-              <Card 
-                key={index} 
-                className="group hover:shadow-md transition-shadow cursor-pointer overflow-hidden"
-              >
-                {category.image && (
-                  <div className="relative h-72 overflow-hidden">
-                    <img 
-                      src={category.image} 
-                      alt={category.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  </div>
-                )}
-                <CardContent className="p-5">
-                  {!category.image && (
-                    <div className="mb-3">
-                      <Icon name={category.icon} size={32} className="text-primary" strokeWidth={1.5} />
-                    </div>
-                  )}
-                  <h3 className="text-sm font-bold text-foreground mb-2 leading-tight">
-                    {category.title}
-                  </h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">
-                    {category.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+            {categories.map((category, index) => {
+              const isRD925 = category.title === "Ремонтер дорожный РД-925";
+              const CardWrapper = isRD925 ? 'a' : 'div';
+              const cardProps = isRD925 ? { href: '/product' } : {};
+              
+              return (
+                <CardWrapper key={index} {...cardProps}>
+                  <Card 
+                    className="group hover:shadow-md transition-shadow cursor-pointer overflow-hidden h-full"
+                  >
+                    {category.image && (
+                      <div className="relative h-72 overflow-hidden">
+                        <img 
+                          src={category.image} 
+                          alt={category.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                      </div>
+                    )}
+                    <CardContent className="p-5">
+                      {!category.image && (
+                        <div className="mb-3">
+                          <Icon name={category.icon} size={32} className="text-primary" strokeWidth={1.5} />
+                        </div>
+                      )}
+                      <h3 className="text-sm font-bold text-foreground mb-2 leading-tight">
+                        {category.title}
+                      </h3>
+                      <p className="text-xs text-muted-foreground leading-relaxed">
+                        {category.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </CardWrapper>
+              );
+            })}
           </div>
           
           <div className="mt-12 text-center">
