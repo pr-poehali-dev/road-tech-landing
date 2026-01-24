@@ -29,10 +29,28 @@ const ProductInfoTabs = ({ specifications, features, equipment }: ProductInfoTab
     <section className="py-12 px-6 bg-slate-50">
       <div className="container mx-auto">
         <Tabs defaultValue="specs" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-8">
-            <TabsTrigger value="specs">Технические характеристики</TabsTrigger>
-            <TabsTrigger value="features">Особенности</TabsTrigger>
-            <TabsTrigger value="equipment">Комплектация</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-3 mb-8 h-auto p-2 bg-white shadow-md rounded-xl">
+            <TabsTrigger 
+              value="specs" 
+              className="text-base font-semibold py-4 px-6 rounded-lg data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-lg transition-all"
+            >
+              <Icon name="FileText" size={20} className="mr-2" />
+              Технические характеристики
+            </TabsTrigger>
+            <TabsTrigger 
+              value="features" 
+              className="text-base font-semibold py-4 px-6 rounded-lg data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-lg transition-all"
+            >
+              <Icon name="Star" size={20} className="mr-2" />
+              Особенности
+            </TabsTrigger>
+            <TabsTrigger 
+              value="equipment" 
+              className="text-base font-semibold py-4 px-6 rounded-lg data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-lg transition-all"
+            >
+              <Icon name="Package" size={20} className="mr-2" />
+              Комплектация
+            </TabsTrigger>
           </TabsList>
           
           <TabsContent value="specs">
