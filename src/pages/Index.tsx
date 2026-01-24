@@ -294,6 +294,58 @@ const Index = () => {
         </div>
       </section>
 
+      <section id="news" className="py-16 px-6 bg-slate-50">
+        <div className="container mx-auto">
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-foreground mb-3">Наши новости</h2>
+            <p className="text-base text-muted-foreground">
+              Последние события и публикации о нашей технике
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="group hover:shadow-md transition-shadow cursor-pointer overflow-hidden">
+              <div className="relative h-56 overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/files/2a0e328b-3914-4f40-8285-8eeee5a9825e.png" 
+                  alt="На дороги Новосибирска выходят термос-бункеры"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardContent className="p-5">
+                <div className="flex items-center gap-2 mb-3 text-xs text-muted-foreground">
+                  <Icon name="Calendar" size={14} strokeWidth={1.5} />
+                  <span>21.10.2025</span>
+                </div>
+                <h3 className="text-lg font-bold text-foreground mb-2 leading-tight">
+                  На дороги Новосибирска выходят термос-бункеры
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                  На портале Новая Сибирь вышла свежая статья о нашей технике
+                </p>
+                <Button variant="ghost" size="sm" className="text-primary hover:text-primary font-semibold p-0 h-auto">
+                  Читать далее
+                  <Icon name="ArrowRight" size={16} className="ml-1" strokeWidth={1.5} />
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-md transition-shadow cursor-pointer overflow-hidden border-dashed">
+              <div className="h-full flex flex-col items-center justify-center p-8 min-h-[400px]">
+                <Icon name="Plus" size={48} className="text-muted-foreground/40 mb-3" strokeWidth={1.5} />
+                <p className="text-sm text-muted-foreground text-center">Место для новости</p>
+              </div>
+            </Card>
+
+            <Card className="group hover:shadow-md transition-shadow cursor-pointer overflow-hidden border-dashed">
+              <div className="h-full flex flex-col items-center justify-center p-8 min-h-[400px]">
+                <Icon name="Plus" size={48} className="text-muted-foreground/40 mb-3" strokeWidth={1.5} />
+                <p className="text-sm text-muted-foreground text-center">Место для новости</p>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section className="px-6 relative overflow-hidden min-h-[70vh] flex items-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"
