@@ -41,20 +41,42 @@ const Product = () => {
   };
 
   const productImages = [
-    "https://cdn.poehali.dev/files/e413111d-a601-4498-8e33-136fd87b9578.jpeg",
-    "https://cdn.poehali.dev/files/1fa98e41-9dcc-459e-b769-9bf9ece9eac5.jpg",
-    "https://cdn.poehali.dev/files/59e7c03d-f6e9-4733-963e-66847d8d15e4.jpg",
+    "https://tehruss.ru/assets/images/products/478/6e8ce83487e48404ec2ce4377b14db217084e505.jpg",
+    "https://tehruss.ru/assets/images/products/478/8c49664d92c6f5cbff526890f69e9a83a568650d.jpg",
+    "https://tehruss.ru/assets/images/products/478/fc0be0908da49e5b9c282cecd59e905247a6c164.jpg",
+    "https://tehruss.ru/assets/images/products/478/5ac551b3d9e9e459cbbb5c6396a2435c415ca3c3.jpg",
+    "https://tehruss.ru/assets/images/products/478/e3c86e33abe533b04acf325d391020fcde3ab2e8.jpg",
+    "https://tehruss.ru/assets/images/products/478/a02e8bf67e710ed3508d78c9f07d8706dd435145.jpg",
   ];
 
   const specifications = [
-    { label: "Базовое шасси", value: "КАМАЗ, МАЗ, ГАЗ" },
-    { label: "Объем бункера", value: "2-4 м³" },
-    { label: "Производительность", value: "до 50 т/ч" },
-    { label: "Тип материала", value: "Литой асфальт" },
-    { label: "Рабочая температура", value: "от -30°C до +40°C" },
-    { label: "Система нагрева", value: "Газовая/Дизельная" },
-    { label: "Срок изготовления", value: "15-45 дней" },
-    { label: "Гарантия", value: "12 месяцев" },
+    { label: "Внутренний объем бункера", value: "4.2 м³" },
+    { label: "Масса литого асфальтобетона", value: "9 т" },
+    { label: "Масса", value: "3170 кг" },
+    { label: "Температура разогрева", value: "200 ℃" },
+    { label: "Тип горючего", value: "дизель" },
+    { label: "Объем топливного бака", value: "100 л" },
+    { label: "Тепловая мощность горелки", value: "65 кВт" },
+    { label: "Расход топлива", value: "3 - 8.5 л/ч" },
+    { label: "Габаритные размеры (д×ш×в)", value: "5.15 × 1.8 × 2.3 м" },
+    { label: "Частота вращения мешалки", value: "10 об/мин" },
+    { label: "Крутящий момент на валу мешалки", value: "24000 Нм" },
+    { label: "Тип котла", value: "цилиндрический, горизонтальный" },
+    { label: "Горелка", value: "дизельная 2 шт." },
+    { label: "Розжиг горелок", value: "автоматический" },
+    { label: "Система привода", value: "гидромеханическая" },
+    { label: "Привод установки", value: "дизель Д-130" },
+    { label: "Гидронасос", value: "НШ-50" },
+    { label: "Объем гидронасоса", value: "50 см³" },
+    { label: "Гидромотор", value: "410.56.3.У" },
+    { label: "Редуктор", value: "1Ц2У" },
+    { label: "Открывание шибера", value: "гидравлическое" },
+    { label: "Тепловая рубашка котла", value: "воздушная" },
+    { label: "Толщина изоляции", value: "50 мм" },
+    { label: "Терморегулятор", value: "есть" },
+    { label: "Автоматическое поддержание температуры", value: "есть" },
+    { label: "Тип соединения", value: "рапид" },
+    { label: "Размещение", value: "на шасси" },
   ];
 
   const features = [
@@ -78,6 +100,18 @@ const Product = () => {
       title: "Простое обслуживание",
       description: "Доступ ко всем узлам для быстрого ремонта"
     },
+  ];
+
+  const equipment = [
+    { name: "Варочный бак с агрегатами", quantity: "1 шт" },
+    { name: "Рама для хранения кохера навесу", quantity: "1 шт" },
+    { name: "Энергетическая силовая установка", quantity: "1 шт" },
+    { name: "Гидравлическая система", quantity: "1 шт" },
+    { name: "Шкаф управления", quantity: "1 шт" },
+    { name: "Паспорт", quantity: "1 шт" },
+    { name: "Руководство по эксплуатации", quantity: "1 шт" },
+    { name: "Руководства по эксплуатации покупных механизмов", quantity: "1 шт" },
+    { name: "Лоток выдачи литой смеси", quantity: "1 шт" },
   ];
 
   return (
@@ -182,6 +216,7 @@ const Product = () => {
         <ProductInfoTabs 
           specifications={specifications}
           features={features}
+          equipment={equipment}
         />
 
         <ProductContactForm 

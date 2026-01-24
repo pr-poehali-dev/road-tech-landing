@@ -13,12 +13,18 @@ interface Feature {
   description: string;
 }
 
+interface Equipment {
+  name: string;
+  quantity: string;
+}
+
 interface ProductInfoTabsProps {
   specifications: Specification[];
   features: Feature[];
+  equipment: Equipment[];
 }
 
-const ProductInfoTabs = ({ specifications, features }: ProductInfoTabsProps) => {
+const ProductInfoTabs = ({ specifications, features, equipment }: ProductInfoTabsProps) => {
   return (
     <section className="py-12 px-6 bg-slate-50">
       <div className="container mx-auto">
@@ -26,7 +32,7 @@ const ProductInfoTabs = ({ specifications, features }: ProductInfoTabsProps) => 
           <TabsList className="grid w-full grid-cols-3 mb-8">
             <TabsTrigger value="specs">Технические характеристики</TabsTrigger>
             <TabsTrigger value="features">Особенности</TabsTrigger>
-            <TabsTrigger value="application">Применение</TabsTrigger>
+            <TabsTrigger value="equipment">Комплектация</TabsTrigger>
           </TabsList>
           
           <TabsContent value="specs">
@@ -69,41 +75,17 @@ const ProductInfoTabs = ({ specifications, features }: ProductInfoTabsProps) => 
             </div>
           </TabsContent>
           
-          <TabsContent value="application">
+          <TabsContent value="equipment">
             <Card>
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-6">Области применения</h3>
-                <div className="space-y-6">
-                  <div>
-                    <h4 className="font-semibold text-lg mb-2 flex items-center gap-2">
-                      <Icon name="Road" size={20} className="text-primary" />
-                      Дорожное строительство
-                    </h4>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Применяется для ремонта дорожных покрытий различных категорий. 
-                      Особенно эффективен для ямочного ремонта и заделки трещин.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-lg mb-2 flex items-center gap-2">
-                      <Icon name="Home" size={20} className="text-primary" />
-                      Городское хозяйство
-                    </h4>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Идеально подходит для оперативного ремонта городских дорог, 
-                      тротуаров и пешеходных зон в любое время года.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-lg mb-2 flex items-center gap-2">
-                      <Icon name="Factory" size={20} className="text-primary" />
-                      Промышленные объекты
-                    </h4>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Используется для содержания территорий промышленных предприятий, 
-                      складских комплексов и логистических центров.
-                    </p>
-                  </div>
+                <h3 className="text-2xl font-bold mb-6">Комплектация</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {equipment.map((item, index) => (
+                    <div key={index} className="flex justify-between items-center py-3 border-b border-border">
+                      <span className="text-muted-foreground font-medium">{item.name}</span>
+                      <span className="text-foreground font-semibold">{item.quantity}</span>
+                    </div>
+                  ))}
                 </div>
               </CardContent>
             </Card>

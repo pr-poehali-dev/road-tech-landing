@@ -1,6 +1,3 @@
-import { Badge } from "@/components/ui/badge";
-import Icon from "@/components/ui/icon";
-
 interface ProductGalleryProps {
   productImages: string[];
   selectedImage: number;
@@ -11,13 +8,6 @@ const ProductGallery = ({ productImages, selectedImage, setSelectedImage }: Prod
   return (
     <div>
       <div className="sticky top-24">
-        <div className="mb-4">
-          <Badge variant="secondary" className="mb-4">
-            <Icon name="Star" size={14} className="mr-1" />
-            Хит продаж
-          </Badge>
-        </div>
-        
         <div className="rounded-lg overflow-hidden bg-white border border-border mb-4">
           <img 
             src={productImages[selectedImage]} 
