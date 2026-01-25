@@ -124,7 +124,7 @@ const Index = () => {
               Широкий ассортимент дорожно-строительной техники
             </p>
           </div>
-          <div className="flex flex-col gap-6 max-w-5xl mx-auto">
+          <div className="flex flex-col gap-6">
             {categories.map((category, index) => {
               const isRD925 = category.title === "Ремонтер дорожный РД-925";
               const CardWrapper = isRD925 ? 'a' : 'div';
@@ -149,8 +149,14 @@ const Index = () => {
                         <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4 leading-tight uppercase tracking-tight">
                           {category.title}
                         </h3>
-                        <p className="text-base text-muted-foreground leading-relaxed mb-6">
+                        <p className="text-base text-muted-foreground leading-relaxed mb-3">
                           {category.description}
+                        </p>
+                        <p className="text-sm text-muted-foreground leading-relaxed mb-2">
+                          Это тестовый текст, который должен быть впоследствии заменен на реальный, с описанием особенностей техники.
+                        </p>
+                        <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                          Это тестовый текст, который должен быть впоследствии заменен на реальный, с описанием особенностей техники.
                         </p>
                         <div className="flex items-center gap-3">
                           <Button 
