@@ -137,7 +137,7 @@ const Index = () => {
                   >
                     <div className="flex flex-col md:flex-row">
                       {category.image && (
-                        <div className="relative w-full md:w-[380px] h-64 md:h-auto overflow-hidden flex-shrink-0">
+                        <div className="relative w-full md:w-[450px] h-72 md:h-80 overflow-hidden flex-shrink-0">
                           <img 
                             src={category.image} 
                             alt={category.title}
@@ -153,10 +153,10 @@ const Index = () => {
                           {category.description}
                         </p>
                         <p className="text-sm text-muted-foreground leading-relaxed mb-2">
-                          Это тестовый текст, который должен быть впоследствии заменен на реальный, с описанием особенностей техники.
+                          Это тестовый текст, который должен быть впоследствии заменен на реальный, с описанием техники.
                         </p>
                         <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                          Это тестовый текст, который должен быть впоследствии заменен на реальный, с описанием особенностей техники.
+                          Это тестовый текст, который должен быть впоследствии заменен на реальный, с описанием техники.
                         </p>
                         <div className="flex items-center gap-3">
                           <Button 
