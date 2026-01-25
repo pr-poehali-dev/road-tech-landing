@@ -124,7 +124,7 @@ const Index = () => {
               Широкий ассортимент дорожно-строительной техники
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {categories.map((category, index) => {
               const isRD925 = category.title === "Ремонтер дорожный РД-925";
               const CardWrapper = isRD925 ? 'a' : 'div';
@@ -133,30 +133,39 @@ const Index = () => {
               return (
                 <CardWrapper key={index} {...cardProps}>
                   <Card 
-                    className="group hover:shadow-md transition-shadow cursor-pointer overflow-hidden h-full"
+                    className="group hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden h-full border-0 shadow-md hover:-translate-y-1"
                   >
                     {category.image && (
-                      <div className="relative h-72 overflow-hidden">
+                      <div className="relative h-80 overflow-hidden">
                         <img 
                           src={category.image} 
                           alt={category.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                        <div className="absolute top-4 right-4">
+                          <div className="bg-primary/90 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-xs font-semibold">
+                            {isRD925 ? 'Хит продаж' : 'Доступно'}
+                          </div>
+                        </div>
+                        <div className="absolute bottom-0 left-0 right-0 p-6">
+                          <h3 className="text-lg font-bold text-white mb-2 leading-tight">
+                            {category.title}
+                          </h3>
+                          <p className="text-sm text-white/90 leading-relaxed">
+                            {category.description}
+                          </p>
+                        </div>
                       </div>
                     )}
-                    <CardContent className="p-5">
-                      {!category.image && (
-                        <div className="mb-3">
-                          <Icon name={category.icon} size={32} className="text-primary" strokeWidth={1.5} />
+                    <CardContent className="p-6 bg-gradient-to-br from-slate-50 to-white">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2 text-primary">
+                          <Icon name={category.icon} size={20} strokeWidth={2} />
+                          <span className="text-sm font-semibold">Подробнее</span>
                         </div>
-                      )}
-                      <h3 className="text-sm font-bold text-foreground mb-2 leading-tight">
-                        {category.title}
-                      </h3>
-                      <p className="text-xs text-muted-foreground leading-relaxed">
-                        {category.description}
-                      </p>
+                        <Icon name="ArrowRight" size={20} className="text-primary group-hover:translate-x-1 transition-transform" strokeWidth={2} />
+                      </div>
                     </CardContent>
                   </Card>
                 </CardWrapper>
