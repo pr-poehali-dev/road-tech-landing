@@ -124,7 +124,7 @@ const Index = () => {
               Широкий ассортимент дорожно-строительной техники
             </p>
           </div>
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 max-w-6xl">
             {categories.map((category, index) => {
               const isRD925 = category.title === "Ремонтер дорожный РД-925";
               const CardWrapper = isRD925 ? 'a' : 'div';
