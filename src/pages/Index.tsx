@@ -153,10 +153,10 @@ const Index = () => {
                           {category.description}
                         </p>
                         <p className="text-sm text-muted-foreground leading-relaxed mb-2">
-                          Это тестовый текст, который должен быть впоследствии заменен на реальный, с описанием техники.
+                          Это тестовый текст, который должен быть впоследствии заменен на реальный, с описанием.
                         </p>
                         <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                          Это тестовый текст, который должен быть впоследствии заменен на реальный, с описанием техники.
+                          Это тестовый текст, который должен быть впоследствии заменен на реальный, с описанием.
                         </p>
                         <div className="flex items-center gap-3">
                           <Button 
