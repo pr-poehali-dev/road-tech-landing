@@ -156,7 +156,7 @@ const Index = () => {
                         </div>
                       )}
                       <CardContent className="p-8 md:p-10 flex flex-col justify-center flex-1 bg-gradient-to-br from-white to-slate-50">
-                        <h3 className="text-2xl md:text-4xl font-bold text-foreground mb-4 leading-tight uppercase tracking-tight">
+                        <h3 className="text-xl md:text-4xl font-bold text-foreground mb-4 leading-tight uppercase tracking-tight">
                           {category.title}
                         </h3>
                         <p className="text-base text-muted-foreground leading-relaxed mb-3">
@@ -186,14 +186,16 @@ const Index = () => {
             })}
           </div>
           
-          <div className="mt-12 text-center">
+          <div className="mt-12 text-center max-w-6xl">
             <p className="text-base text-muted-foreground mb-6">
               Не нашли нужную технику или хотите узнать подробнее?
             </p>
-            <Button size="lg" className="font-medium shadow-lg hover:shadow-xl transition-all px-8">
-              <Icon name="Phone" size={18} className="mr-2" strokeWidth={1.5} />
-              Получить консультацию
-            </Button>
+            <div className="flex justify-center md:justify-start">
+              <Button size="lg" className="font-medium shadow-lg hover:shadow-xl transition-all px-8">
+                <Icon name="Phone" size={18} className="mr-2" strokeWidth={1.5} />
+                Получить консультацию
+              </Button>
+            </div>
           </div>
         </div>
       </section>
