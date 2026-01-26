@@ -29,27 +29,28 @@ const ProductInfoTabs = ({ specifications, features, equipment }: ProductInfoTab
     <section className="py-12 px-6 bg-slate-50">
       <div className="container mx-auto">
         <Tabs defaultValue="specs" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-8 h-auto p-2 bg-white shadow-md rounded-xl">
+          <TabsList className="grid w-full grid-cols-3 mb-8 h-auto p-1 md:p-2 bg-white shadow-md rounded-xl">
             <TabsTrigger 
               value="specs" 
-              className="text-base font-semibold py-4 px-6 rounded-lg data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-lg transition-all"
+              className="text-xs md:text-base font-semibold py-2 px-2 md:py-4 md:px-6 rounded-lg data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-lg transition-all flex flex-col md:flex-row items-center gap-1"
             >
-              <Icon name="FileText" size={20} className="mr-2" />
-              Технические характеристики
+              <Icon name="FileText" size={16} className="md:mr-2" />
+              <span className="hidden md:inline">Технические характеристики</span>
+              <span className="md:hidden">Техн. хар-ки</span>
             </TabsTrigger>
             <TabsTrigger 
               value="features" 
-              className="text-base font-semibold py-4 px-6 rounded-lg data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-lg transition-all"
+              className="text-xs md:text-base font-semibold py-2 px-2 md:py-4 md:px-6 rounded-lg data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-lg transition-all flex flex-col md:flex-row items-center gap-1"
             >
-              <Icon name="Star" size={20} className="mr-2" />
-              Особенности
+              <Icon name="Star" size={16} className="md:mr-2" />
+              <span>Особенности</span>
             </TabsTrigger>
             <TabsTrigger 
               value="equipment" 
-              className="text-base font-semibold py-4 px-6 rounded-lg data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-lg transition-all"
+              className="text-xs md:text-base font-semibold py-2 px-2 md:py-4 md:px-6 rounded-lg data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-lg transition-all flex flex-col md:flex-row items-center gap-1"
             >
-              <Icon name="Package" size={20} className="mr-2" />
-              Комплектация
+              <Icon name="Package" size={16} className="md:mr-2" />
+              <span>Комплектация</span>
             </TabsTrigger>
           </TabsList>
           

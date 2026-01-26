@@ -157,13 +157,15 @@ const Product = () => {
                 </div>
 
                 <div className="space-y-4 mb-8">
-                  <Button size="lg" className="w-full text-base font-semibold">
+                  <Button size="lg" className="w-full text-sm md:text-base font-semibold">
                     <Icon name="Mail" size={20} className="mr-2" />
-                    Получить коммерческое предложение
+                    <span className="hidden sm:inline">Получить коммерческое предложение</span>
+                    <span className="sm:hidden">Получить КП</span>
                   </Button>
-                  <Button size="lg" variant="outline" className="w-full text-base font-semibold">
+                  <Button size="lg" variant="outline" className="w-full text-sm md:text-base font-semibold">
                     <Icon name="Download" size={20} className="mr-2" />
-                    Скачать техническую документацию
+                    <span className="hidden sm:inline">Скачать техническую документацию</span>
+                    <span className="sm:hidden">Скачать документы</span>
                   </Button>
                 </div>
 

@@ -98,7 +98,7 @@ const Index = () => {
               <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
               <span className="text-primary font-semibold text-sm tracking-wide">ПРОИЗВОДСТВО С 1992 ГОДА</span>
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-tight">
+            <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-tight">
               Дорпром Интернациональ
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl leading-relaxed">
@@ -156,7 +156,7 @@ const Index = () => {
                         </div>
                       )}
                       <CardContent className="p-8 md:p-10 flex flex-col justify-center flex-1 bg-gradient-to-br from-white to-slate-50">
-                        <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4 leading-tight uppercase tracking-tight">
+                        <h3 className="text-2xl md:text-4xl font-bold text-foreground mb-4 leading-tight uppercase tracking-tight">
                           {category.title}
                         </h3>
                         <p className="text-base text-muted-foreground leading-relaxed mb-3">

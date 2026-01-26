@@ -12,7 +12,7 @@ const ProductGallery = ({ productImages, selectedImage, setSelectedImage }: Prod
           <img 
             src={productImages[selectedImage]} 
             alt="Ремонтер дорожный РД-925"
-            className="w-full h-[500px] object-cover"
+            className="w-full h-[300px] md:h-[500px] object-cover"
           />
         </div>
         
