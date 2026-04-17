@@ -212,6 +212,33 @@ const Product = () => {
                 </div>
               </div>
             </div>
+
+            <div className="mt-12">
+              <div className="flex items-center gap-2 mb-6">
+                <Icon name="PlayCircle" size={24} className="text-primary" />
+                <h2 className="text-2xl font-bold text-foreground">Видео работы оборудования</h2>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="rounded-lg overflow-hidden bg-black border border-border aspect-video">
+                  <iframe
+                    src="https://rutube.ru/play/embed/c80a59f15ad00d4ea3ad20e1e0a73dea/"
+                    title="Видео работы оборудования 1"
+                    className="w-full h-full"
+                    allow="clipboard-write; autoplay"
+                    allowFullScreen
+                  />
+                </div>
+                <div className="rounded-lg overflow-hidden bg-black border border-border aspect-video">
+                  <iframe
+                    src="https://rutube.ru/play/embed/b0c3d71e8fb5d7aa28a7a14f7b4f84e5/"
+                    title="Видео работы оборудования 2"
+                    className="w-full h-full"
+                    allow="clipboard-write; autoplay"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

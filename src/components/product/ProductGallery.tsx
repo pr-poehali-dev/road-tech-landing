@@ -1,17 +1,10 @@
-import Icon from "@/components/ui/icon";
-
 interface ProductGalleryProps {
   productImages: string[];
   selectedImage: number;
   setSelectedImage: (index: number) => void;
-  videoUrl?: string;
-  videoPoster?: string;
 }
 
-const ProductGallery = ({ productImages, selectedImage, setSelectedImage, videoUrl, videoPoster }: ProductGalleryProps) => {
-  const defaultVideoUrl = videoUrl ?? "https://www.youtube.com/embed/dQw4w9WgXcQ";
-  const defaultPoster = videoPoster ?? productImages[0];
-
+const ProductGallery = ({ productImages, selectedImage, setSelectedImage }: ProductGalleryProps) => {
   return (
     <div>
       <div className="sticky top-24">
@@ -23,7 +16,7 @@ const ProductGallery = ({ productImages, selectedImage, setSelectedImage, videoU
           />
         </div>
         
-        <div className="grid grid-cols-3 gap-3 mb-4">
+        <div className="grid grid-cols-3 gap-3">
           {productImages.map((image, index) => (
             <button
               key={index}
@@ -41,22 +34,6 @@ const ProductGallery = ({ productImages, selectedImage, setSelectedImage, videoU
               />
             </button>
           ))}
-        </div>
-
-        <div className="mt-6">
-          <div className="flex items-center gap-2 mb-3">
-            <Icon name="PlayCircle" size={20} className="text-primary" />
-            <h3 className="font-semibold text-foreground">Видео работы оборудования</h3>
-          </div>
-          <div className="rounded-lg overflow-hidden bg-black border border-border aspect-video">
-            <iframe
-              src={defaultVideoUrl}
-              title="Превью видео"
-              className="w-full h-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
         </div>
       </div>
     </div>
